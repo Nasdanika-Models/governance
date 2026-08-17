@@ -2,11 +2,12 @@
  */
 package org.nasdanika.models.governance;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.nasdanika.models.nxcore.ModelElement;
+import org.nasdanika.models.nxcore.Period;
+
+import org.nasdanika.models.role.Undergoer;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,8 +22,6 @@ import org.nasdanika.models.nxcore.ModelElement;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.governance.Assessment#getDate <em>Date</em>}</li>
- *   <li>{@link org.nasdanika.models.governance.Assessment#getAssessor <em>Assessor</em>}</li>
  *   <li>{@link org.nasdanika.models.governance.Assessment#getScope <em>Scope</em>}</li>
  *   <li>{@link org.nasdanika.models.governance.Assessment#getFindings <em>Findings</em>}</li>
  *   <li>{@link org.nasdanika.models.governance.Assessment#getEvidence <em>Evidence</em>}</li>
@@ -32,65 +31,22 @@ import org.nasdanika.models.nxcore.ModelElement;
  * @model
  * @generated
  */
-public interface Assessment extends ModelElement {
+public interface Assessment extends ModelElement, Period, Undergoer {
 	/**
-	 * Returns the value of the '<em><b>Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Date</em>' attribute.
-	 * @see #setDate(Date)
-	 * @see org.nasdanika.models.governance.GovernancePackage#getAssessment_Date()
-	 * @model unique="false"
-	 * @generated
-	 */
-	Date getDate();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.governance.Assessment#getDate <em>Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Date</em>' attribute.
-	 * @see #getDate()
-	 * @generated
-	 */
-	void setDate(Date value);
-
-	/**
-	 * Returns the value of the '<em><b>Assessor</b></em>' attribute.
+	 * Returns the value of the '<em><b>Scope</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.models.governance.Governed}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Assessing party: internal audit, second line, external auditor.
+	 * *
+	 * Assessing party: internal audit, second line, external auditor.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Assessor</em>' attribute.
-	 * @see #setAssessor(String)
-	 * @see org.nasdanika.models.governance.GovernancePackage#getAssessment_Assessor()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getAssessor();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.governance.Assessment#getAssessor <em>Assessor</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Assessor</em>' attribute.
-	 * @see #getAssessor()
-	 * @generated
-	 */
-	void setAssessor(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Scope</b></em>' reference list.
-	 * The list contents are of type {@link org.nasdanika.models.governance.GovernedElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scope</em>' reference list.
 	 * @see org.nasdanika.models.governance.GovernancePackage#getAssessment_Scope()
 	 * @model
 	 * @generated
 	 */
-	EList<GovernedElement> getScope();
+	EList<Governed> getScope();
 
 	/**
 	 * Returns the value of the '<em><b>Findings</b></em>' containment reference list.

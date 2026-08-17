@@ -16,6 +16,7 @@ import org.nasdanika.models.nxcore.ModelElement;
  * <!-- begin-model-doc -->
  * The application of a control to a governed element: the unit of compliance
  * status. "Control X on system Y is VERIFIED, and here is the evidence."
+ * TODO - to Staged and drop implementation status
  * <!-- end-model-doc -->
  *
  * <p>
@@ -36,17 +37,17 @@ import org.nasdanika.models.nxcore.ModelElement;
 public interface ControlApplication extends ModelElement {
 	/**
 	 * Returns the value of the '<em><b>Subject</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.governance.GovernedElement#getControlApplications <em>Control Applications</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.governance.Governed#getControlApplications <em>Control Applications</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Subject</em>' container reference.
-	 * @see #setSubject(GovernedElement)
+	 * @see #setSubject(Governed)
 	 * @see org.nasdanika.models.governance.GovernancePackage#getControlApplication_Subject()
-	 * @see org.nasdanika.models.governance.GovernedElement#getControlApplications
+	 * @see org.nasdanika.models.governance.Governed#getControlApplications
 	 * @model opposite="controlApplications" transient="false"
 	 * @generated
 	 */
-	GovernedElement getSubject();
+	Governed getSubject();
 
 	/**
 	 * Sets the value of the '{@link org.nasdanika.models.governance.ControlApplication#getSubject <em>Subject</em>}' container reference.
@@ -56,7 +57,7 @@ public interface ControlApplication extends ModelElement {
 	 * @see #getSubject()
 	 * @generated
 	 */
-	void setSubject(GovernedElement value);
+	void setSubject(Governed value);
 
 	/**
 	 * Returns the value of the '<em><b>Control</b></em>' reference.

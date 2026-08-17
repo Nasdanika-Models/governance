@@ -13,6 +13,10 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Implementation Status</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * *
+ * TODO - to class, maybe extending stage or just stage
+ * <!-- end-model-doc -->
  * @see org.nasdanika.models.governance.GovernancePackage#getImplementationStatus()
  * @model
  * @generated

@@ -104,7 +104,9 @@ public interface Control extends ModelElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Risks this control mitigates.
+	 * *
+	 * Risks this control mitigates.
+	 * TODO - computed opposites to allow risks and controls to evolve in independent resources
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mitigates</em>' reference list.
 	 * @see org.nasdanika.models.governance.GovernancePackage#getControl_Mitigates()

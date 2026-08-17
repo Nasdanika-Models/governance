@@ -23,17 +23,18 @@ import org.nasdanika.models.governance.Framework;
 import org.nasdanika.models.governance.GovernanceFactory;
 import org.nasdanika.models.governance.GovernancePackage;
 import org.nasdanika.models.governance.GovernanceProgram;
-import org.nasdanika.models.governance.GovernedElement;
+import org.nasdanika.models.governance.Governed;
 import org.nasdanika.models.governance.ImplementationStatus;
 import org.nasdanika.models.governance.Level;
 import org.nasdanika.models.governance.Policy;
-import org.nasdanika.models.governance.Property;
 import org.nasdanika.models.governance.Requirement;
 import org.nasdanika.models.governance.Risk;
 import org.nasdanika.models.governance.RiskTreatment;
 import org.nasdanika.models.governance.Waiver;
 
 import org.nasdanika.models.nxcore.NxcorePackage;
+
+import org.nasdanika.models.role.RolePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,13 +43,6 @@ import org.nasdanika.models.nxcore.NxcorePackage;
  * @generated
  */
 public class GovernancePackageImpl extends EPackageImpl implements GovernancePackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass propertyEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -96,7 +90,7 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass governedElementEClass = null;
+	private EClass governedEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -222,8 +216,9 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		isInited = true;
 
 		// Initialize simple dependencies
-		EcorePackage.eINSTANCE.eClass();
 		NxcorePackage.eINSTANCE.eClass();
+		EcorePackage.eINSTANCE.eClass();
+		RolePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theGovernancePackage.createPackageContents();
@@ -237,36 +232,6 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(GovernancePackage.eNS_URI, theGovernancePackage);
 		return theGovernancePackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getProperty() {
-		return propertyEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProperty_Name() {
-		return (EAttribute)propertyEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getProperty_Value() {
-		return (EAttribute)propertyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -595,8 +560,8 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 * @generated
 	 */
 	@Override
-	public EClass getGovernedElement() {
-		return governedElementEClass;
+	public EClass getGoverned() {
+		return governedEClass;
 	}
 
 	/**
@@ -605,8 +570,8 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 * @generated
 	 */
 	@Override
-	public EReference getGovernedElement_ControlApplications() {
-		return (EReference)governedElementEClass.getEStructuralFeatures().get(0);
+	public EReference getGoverned_ControlApplications() {
+		return (EReference)governedEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -615,8 +580,8 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 * @generated
 	 */
 	@Override
-	public EReference getGovernedElement_Risks() {
-		return (EReference)governedElementEClass.getEStructuralFeatures().get(1);
+	public EReference getGoverned_Risks() {
+		return (EReference)governedEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -625,8 +590,8 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 * @generated
 	 */
 	@Override
-	public EReference getGovernedElement_Waivers() {
-		return (EReference)governedElementEClass.getEStructuralFeatures().get(2);
+	public EReference getGoverned_Waivers() {
+		return (EReference)governedEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -715,7 +680,7 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEvidence_Collected() {
+	public EAttribute getEvidence_Source() {
 		return (EAttribute)evidenceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -725,18 +690,8 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEvidence_Source() {
-		return (EAttribute)evidenceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getEvidence_Automated() {
-		return (EAttribute)evidenceEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)evidenceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -755,28 +710,8 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAssessment_Date() {
-		return (EAttribute)assessmentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAssessment_Assessor() {
-		return (EAttribute)assessmentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getAssessment_Scope() {
-		return (EReference)assessmentEClass.getEStructuralFeatures().get(2);
+		return (EReference)assessmentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -786,7 +721,7 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 */
 	@Override
 	public EReference getAssessment_Findings() {
-		return (EReference)assessmentEClass.getEStructuralFeatures().get(3);
+		return (EReference)assessmentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -796,7 +731,7 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 */
 	@Override
 	public EReference getAssessment_Evidence() {
-		return (EReference)assessmentEClass.getEStructuralFeatures().get(4);
+		return (EReference)assessmentEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -905,16 +840,6 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWaiver_Expires() {
-		return (EAttribute)waiverEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EEnum getLevel() {
 		return levelEEnum;
 	}
@@ -998,10 +923,6 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		isCreated = true;
 
 		// Create classes and their features
-		propertyEClass = createEClass(PROPERTY);
-		createEAttribute(propertyEClass, PROPERTY__NAME);
-		createEAttribute(propertyEClass, PROPERTY__VALUE);
-
 		governanceProgramEClass = createEClass(GOVERNANCE_PROGRAM);
 		createEReference(governanceProgramEClass, GOVERNANCE_PROGRAM__FRAMEWORKS);
 		createEReference(governanceProgramEClass, GOVERNANCE_PROGRAM__POLICIES);
@@ -1040,10 +961,10 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		createEReference(riskEClass, RISK__MITIGATIONS);
 		createEReference(riskEClass, RISK__SUBJECT);
 
-		governedElementEClass = createEClass(GOVERNED_ELEMENT);
-		createEReference(governedElementEClass, GOVERNED_ELEMENT__CONTROL_APPLICATIONS);
-		createEReference(governedElementEClass, GOVERNED_ELEMENT__RISKS);
-		createEReference(governedElementEClass, GOVERNED_ELEMENT__WAIVERS);
+		governedEClass = createEClass(GOVERNED);
+		createEReference(governedEClass, GOVERNED__CONTROL_APPLICATIONS);
+		createEReference(governedEClass, GOVERNED__RISKS);
+		createEReference(governedEClass, GOVERNED__WAIVERS);
 
 		controlApplicationEClass = createEClass(CONTROL_APPLICATION);
 		createEReference(controlApplicationEClass, CONTROL_APPLICATION__SUBJECT);
@@ -1054,13 +975,10 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 
 		evidenceEClass = createEClass(EVIDENCE);
 		createEAttribute(evidenceEClass, EVIDENCE__LOCATION);
-		createEAttribute(evidenceEClass, EVIDENCE__COLLECTED);
 		createEAttribute(evidenceEClass, EVIDENCE__SOURCE);
 		createEAttribute(evidenceEClass, EVIDENCE__AUTOMATED);
 
 		assessmentEClass = createEClass(ASSESSMENT);
-		createEAttribute(assessmentEClass, ASSESSMENT__DATE);
-		createEAttribute(assessmentEClass, ASSESSMENT__ASSESSOR);
 		createEReference(assessmentEClass, ASSESSMENT__SCOPE);
 		createEReference(assessmentEClass, ASSESSMENT__FINDINGS);
 		createEReference(assessmentEClass, ASSESSMENT__EVIDENCE);
@@ -1076,7 +994,6 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		createEReference(waiverEClass, WAIVER__CONTROL);
 		createEReference(waiverEClass, WAIVER__SUBJECT);
 		createEAttribute(waiverEClass, WAIVER__JUSTIFICATION);
-		createEAttribute(waiverEClass, WAIVER__EXPIRES);
 
 		// Create enums
 		levelEEnum = createEEnum(LEVEL);
@@ -1111,8 +1028,9 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		NxcorePackage theNxcorePackage = (NxcorePackage)EPackage.Registry.INSTANCE.getEPackage(NxcorePackage.eNS_URI);
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+		RolePackage theRolePackage = (RolePackage)EPackage.Registry.INSTANCE.getEPackage(RolePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1125,18 +1043,18 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		policyEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
 		controlEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
 		riskEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
-		governedElementEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		governedEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
 		controlApplicationEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
 		evidenceEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		evidenceEClass.getESuperTypes().add(theNxcorePackage.getTemporal());
 		assessmentEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		assessmentEClass.getESuperTypes().add(theNxcorePackage.getPeriod());
+		assessmentEClass.getESuperTypes().add(theRolePackage.getUndergoer());
 		findingEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
 		waiverEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		waiverEClass.getESuperTypes().add(theNxcorePackage.getPeriod());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProperty_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProperty_Value(), theEcorePackage.getEString(), "value", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(governanceProgramEClass, GovernanceProgram.class, "GovernanceProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGovernanceProgram_Frameworks(), this.getFramework(), null, "frameworks", null, 0, -1, GovernanceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGovernanceProgram_Policies(), this.getPolicy(), null, "policies", null, 0, -1, GovernanceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1173,15 +1091,15 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		initEAttribute(getRisk_ResidualImpact(), this.getLevel(), "residualImpact", null, 0, 1, Risk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRisk_Treatment(), this.getRiskTreatment(), "treatment", null, 0, 1, Risk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRisk_Mitigations(), this.getControl(), this.getControl_Mitigates(), "mitigations", null, 0, -1, Risk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRisk_Subject(), this.getGovernedElement(), this.getGovernedElement_Risks(), "subject", null, 0, 1, Risk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRisk_Subject(), this.getGoverned(), this.getGoverned_Risks(), "subject", null, 0, 1, Risk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(governedElementEClass, GovernedElement.class, "GovernedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGovernedElement_ControlApplications(), this.getControlApplication(), this.getControlApplication_Subject(), "controlApplications", null, 0, -1, GovernedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGovernedElement_Risks(), this.getRisk(), this.getRisk_Subject(), "risks", null, 0, -1, GovernedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGovernedElement_Waivers(), this.getWaiver(), this.getWaiver_Subject(), "waivers", null, 0, -1, GovernedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(governedEClass, Governed.class, "Governed", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGoverned_ControlApplications(), this.getControlApplication(), this.getControlApplication_Subject(), "controlApplications", null, 0, -1, Governed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGoverned_Risks(), this.getRisk(), this.getRisk_Subject(), "risks", null, 0, -1, Governed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGoverned_Waivers(), this.getWaiver(), this.getWaiver_Subject(), "waivers", null, 0, -1, Governed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controlApplicationEClass, ControlApplication.class, "ControlApplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getControlApplication_Subject(), this.getGovernedElement(), this.getGovernedElement_ControlApplications(), "subject", null, 0, 1, ControlApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getControlApplication_Subject(), this.getGoverned(), this.getGoverned_ControlApplications(), "subject", null, 0, 1, ControlApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getControlApplication_Control(), this.getControl(), null, "control", null, 0, 1, ControlApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getControlApplication_Status(), this.getImplementationStatus(), "status", null, 0, 1, ControlApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getControlApplication_LastVerified(), theEcorePackage.getEDate(), "lastVerified", null, 0, 1, ControlApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1189,14 +1107,11 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 
 		initEClass(evidenceEClass, Evidence.class, "Evidence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEvidence_Location(), theEcorePackage.getEString(), "location", null, 0, 1, Evidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEvidence_Collected(), theEcorePackage.getEDate(), "collected", null, 0, 1, Evidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEvidence_Source(), theEcorePackage.getEString(), "source", null, 0, 1, Evidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEvidence_Automated(), theEcorePackage.getEBoolean(), "automated", null, 0, 1, Evidence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(assessmentEClass, Assessment.class, "Assessment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAssessment_Date(), theEcorePackage.getEDate(), "date", null, 0, 1, Assessment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssessment_Assessor(), theEcorePackage.getEString(), "assessor", null, 0, 1, Assessment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssessment_Scope(), this.getGovernedElement(), null, "scope", null, 0, -1, Assessment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssessment_Scope(), this.getGoverned(), null, "scope", null, 0, -1, Assessment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssessment_Findings(), this.getFinding(), null, "findings", null, 0, -1, Assessment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssessment_Evidence(), this.getEvidence(), null, "evidence", null, 0, -1, Assessment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1209,9 +1124,8 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 
 		initEClass(waiverEClass, Waiver.class, "Waiver", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWaiver_Control(), this.getControl(), null, "control", null, 0, 1, Waiver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWaiver_Subject(), this.getGovernedElement(), this.getGovernedElement_Waivers(), "subject", null, 0, 1, Waiver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWaiver_Subject(), this.getGoverned(), this.getGoverned_Waivers(), "subject", null, 0, 1, Waiver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWaiver_Justification(), theEcorePackage.getEString(), "justification", null, 0, 1, Waiver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWaiver_Expires(), theEcorePackage.getEDate(), "expires", null, 0, 1, Waiver.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(levelEEnum, Level.class, "Level");
@@ -1287,7 +1201,7 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		  (levelEEnum,
 		   source,
 		   new String[] {
-			   "documentation", " Ordinal scale shared by likelihood, impact, and severity."
+			   "documentation", "*\nOrdinal scale shared by likelihood, impact, and severity.\nTODO - to a class"
 		   });
 		addAnnotation
 		  (governanceProgramEClass,
@@ -1374,6 +1288,12 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 			   "documentation", " Substitutes for an infeasible primary control."
 		   });
 		addAnnotation
+		  (controlAutomationEEnum,
+		   source,
+		   new String[] {
+			   "documentation", "*\nTODO - to a class contained in the governance domain"
+		   });
+		addAnnotation
 		  (controlAutomationEEnum.getELiterals().get(1),
 		   source,
 		   new String[] {
@@ -1395,7 +1315,7 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		  (getControl_Mitigates(),
 		   source,
 		   new String[] {
-			   "documentation", " Risks this control mitigates."
+			   "documentation", "*\nRisks this control mitigates.\nTODO - computed opposites to allow risks and controls to evolve in independent resources"
 		   });
 		addAnnotation
 		  (riskTreatmentEEnum,
@@ -1434,10 +1354,16 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 			   "documentation", " What the risk is about; anything governed."
 		   });
 		addAnnotation
-		  (governedElementEClass,
+		  (governedEClass,
 		   source,
 		   new String[] {
 			   "documentation", " ---- Governed elements ----"
+		   });
+		addAnnotation
+		  (implementationStatusEEnum,
+		   source,
+		   new String[] {
+			   "documentation", "*\nTODO - to class, maybe extending stage or just stage"
 		   });
 		addAnnotation
 		  (implementationStatusEEnum.getELiterals().get(3),
@@ -1455,7 +1381,7 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		  (controlApplicationEClass,
 		   source,
 		   new String[] {
-			   "documentation", "The application of a control to a governed element: the unit of compliance\nstatus. \"Control X on system Y is VERIFIED, and here is the evidence.\""
+			   "documentation", "The application of a control to a governed element: the unit of compliance\nstatus. \"Control X on system Y is VERIFIED, and here is the evidence.\"\nTODO - to Staged and drop implementation status"
 		   });
 		addAnnotation
 		  (evidenceEClass,
@@ -1482,16 +1408,28 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 			   "documentation", " ---- Assessments, findings, waivers ----"
 		   });
 		addAnnotation
-		  (getAssessment_Assessor(),
+		  (getAssessment_Scope(),
 		   source,
 		   new String[] {
-			   "documentation", " Assessing party: internal audit, second line, external auditor."
+			   "documentation", "*\nAssessing party: internal audit, second line, external auditor."
+		   });
+		addAnnotation
+		  (findingStatusEEnum,
+		   source,
+		   new String[] {
+			   "documentation", "*\nTODO - to stages"
 		   });
 		addAnnotation
 		  (findingStatusEEnum.getELiterals().get(3),
 		   source,
 		   new String[] {
 			   "documentation", " Risk-accepted via a waiver; documented decision."
+		   });
+		addAnnotation
+		  (findingEClass,
+		   source,
+		   new String[] {
+			   "documentation", "*\nTODO - to staged"
 		   });
 		addAnnotation
 		  (getFinding_Subject(),

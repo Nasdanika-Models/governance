@@ -11,6 +11,11 @@ import org.nasdanika.models.nxcore.ModelElement;
  * A representation of the model object '<em><b>Finding</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * TODO - to staged
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

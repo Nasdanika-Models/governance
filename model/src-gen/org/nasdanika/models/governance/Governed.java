@@ -8,7 +8,7 @@ import org.nasdanika.models.nxcore.ModelElement;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Governed Element</b></em>'.
+ * A representation of the model object '<em><b>Governed</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
@@ -19,16 +19,16 @@ import org.nasdanika.models.nxcore.ModelElement;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.governance.GovernedElement#getControlApplications <em>Control Applications</em>}</li>
- *   <li>{@link org.nasdanika.models.governance.GovernedElement#getRisks <em>Risks</em>}</li>
- *   <li>{@link org.nasdanika.models.governance.GovernedElement#getWaivers <em>Waivers</em>}</li>
+ *   <li>{@link org.nasdanika.models.governance.Governed#getControlApplications <em>Control Applications</em>}</li>
+ *   <li>{@link org.nasdanika.models.governance.Governed#getRisks <em>Risks</em>}</li>
+ *   <li>{@link org.nasdanika.models.governance.Governed#getWaivers <em>Waivers</em>}</li>
  * </ul>
  *
- * @see org.nasdanika.models.governance.GovernancePackage#getGovernedElement()
+ * @see org.nasdanika.models.governance.GovernancePackage#getGoverned()
  * @model abstract="true"
  * @generated
  */
-public interface GovernedElement extends ModelElement {
+public interface Governed extends ModelElement {
 	/**
 	 * Returns the value of the '<em><b>Control Applications</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.models.governance.ControlApplication}.
@@ -36,7 +36,7 @@ public interface GovernedElement extends ModelElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Control Applications</em>' containment reference list.
-	 * @see org.nasdanika.models.governance.GovernancePackage#getGovernedElement_ControlApplications()
+	 * @see org.nasdanika.models.governance.GovernancePackage#getGoverned_ControlApplications()
 	 * @see org.nasdanika.models.governance.ControlApplication#getSubject
 	 * @model opposite="subject" containment="true"
 	 * @generated
@@ -50,7 +50,7 @@ public interface GovernedElement extends ModelElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Risks</em>' reference list.
-	 * @see org.nasdanika.models.governance.GovernancePackage#getGovernedElement_Risks()
+	 * @see org.nasdanika.models.governance.GovernancePackage#getGoverned_Risks()
 	 * @see org.nasdanika.models.governance.Risk#getSubject
 	 * @model opposite="subject"
 	 * @generated
@@ -64,11 +64,11 @@ public interface GovernedElement extends ModelElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Waivers</em>' reference list.
-	 * @see org.nasdanika.models.governance.GovernancePackage#getGovernedElement_Waivers()
+	 * @see org.nasdanika.models.governance.GovernancePackage#getGoverned_Waivers()
 	 * @see org.nasdanika.models.governance.Waiver#getSubject
 	 * @model opposite="subject"
 	 * @generated
 	 */
 	EList<Waiver> getWaivers();
 
-} // GovernedElement
+} // Governed

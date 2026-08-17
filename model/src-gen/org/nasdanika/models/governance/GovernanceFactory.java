@@ -22,15 +22,6 @@ public interface GovernanceFactory extends EFactory {
 	GovernanceFactory eINSTANCE = org.nasdanika.models.governance.impl.GovernanceFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Property</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Property</em>'.
-	 * @generated
-	 */
-	Property createProperty();
-
-	/**
 	 * Returns a new object of class '<em>Program</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

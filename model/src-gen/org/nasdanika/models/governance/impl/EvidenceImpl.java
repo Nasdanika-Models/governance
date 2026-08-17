@@ -2,12 +2,20 @@
  */
 package org.nasdanika.models.governance.impl;
 
-import java.util.Date;
+import java.time.Duration;
+import java.time.Instant;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.models.governance.Evidence;
 import org.nasdanika.models.governance.GovernancePackage;
+
+import org.nasdanika.models.nxcore.NxcorePackage;
+import org.nasdanika.models.nxcore.Temporal;
 
 import org.nasdanika.models.nxcore.impl.ModelElementImpl;
 
@@ -19,8 +27,12 @@ import org.nasdanika.models.nxcore.impl.ModelElementImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.models.governance.impl.EvidenceImpl#getBase <em>Base</em>}</li>
+ *   <li>{@link org.nasdanika.models.governance.impl.EvidenceImpl#getInstant <em>Instant</em>}</li>
+ *   <li>{@link org.nasdanika.models.governance.impl.EvidenceImpl#getDuration <em>Duration</em>}</li>
+ *   <li>{@link org.nasdanika.models.governance.impl.EvidenceImpl#getLowerBounds <em>Lower Bounds</em>}</li>
+ *   <li>{@link org.nasdanika.models.governance.impl.EvidenceImpl#getUpperBounds <em>Upper Bounds</em>}</li>
  *   <li>{@link org.nasdanika.models.governance.impl.EvidenceImpl#getLocation <em>Location</em>}</li>
- *   <li>{@link org.nasdanika.models.governance.impl.EvidenceImpl#getCollected <em>Collected</em>}</li>
  *   <li>{@link org.nasdanika.models.governance.impl.EvidenceImpl#getSource <em>Source</em>}</li>
  *   <li>{@link org.nasdanika.models.governance.impl.EvidenceImpl#isAutomated <em>Automated</em>}</li>
  * </ul>
@@ -28,6 +40,26 @@ import org.nasdanika.models.nxcore.impl.ModelElementImpl;
  * @generated
  */
 public class EvidenceImpl extends ModelElementImpl implements Evidence {
+	/**
+	 * The default value of the '{@link #getInstant() <em>Instant</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstant()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Instant INSTANT_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getDuration() <em>Duration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDuration()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Duration DURATION_EDEFAULT = null;
+
 	/**
 	 * The default value of the '{@link #getLocation() <em>Location</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -37,16 +69,6 @@ public class EvidenceImpl extends ModelElementImpl implements Evidence {
 	 * @ordered
 	 */
 	protected static final String LOCATION_EDEFAULT = null;
-
-	/**
-	 * The default value of the '{@link #getCollected() <em>Collected</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCollected()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date COLLECTED_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getSource() <em>Source</em>}' attribute.
@@ -93,6 +115,97 @@ public class EvidenceImpl extends ModelElementImpl implements Evidence {
 	 * @generated
 	 */
 	@Override
+	public Temporal getBase() {
+		return (Temporal)eDynamicGet(GovernancePackage.EVIDENCE__BASE, NxcorePackage.Literals.TEMPORAL__BASE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Temporal basicGetBase() {
+		return (Temporal)eDynamicGet(GovernancePackage.EVIDENCE__BASE, NxcorePackage.Literals.TEMPORAL__BASE, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBase(Temporal newBase) {
+		eDynamicSet(GovernancePackage.EVIDENCE__BASE, NxcorePackage.Literals.TEMPORAL__BASE, newBase);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Instant getInstant() {
+		return (Instant)eDynamicGet(GovernancePackage.EVIDENCE__INSTANT, NxcorePackage.Literals.TEMPORAL__INSTANT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setInstant(Instant newInstant) {
+		eDynamicSet(GovernancePackage.EVIDENCE__INSTANT, NxcorePackage.Literals.TEMPORAL__INSTANT, newInstant);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Duration getDuration() {
+		return (Duration)eDynamicGet(GovernancePackage.EVIDENCE__DURATION, NxcorePackage.Literals.TEMPORAL__DURATION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDuration(Duration newDuration) {
+		eDynamicSet(GovernancePackage.EVIDENCE__DURATION, NxcorePackage.Literals.TEMPORAL__DURATION, newDuration);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Temporal> getLowerBounds() {
+		return (EList<Temporal>)eDynamicGet(GovernancePackage.EVIDENCE__LOWER_BOUNDS, NxcorePackage.Literals.TEMPORAL__LOWER_BOUNDS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Temporal> getUpperBounds() {
+		return (EList<Temporal>)eDynamicGet(GovernancePackage.EVIDENCE__UPPER_BOUNDS, NxcorePackage.Literals.TEMPORAL__UPPER_BOUNDS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getLocation() {
 		return (String)eDynamicGet(GovernancePackage.EVIDENCE__LOCATION, GovernancePackage.Literals.EVIDENCE__LOCATION, true, true);
 	}
@@ -105,26 +218,6 @@ public class EvidenceImpl extends ModelElementImpl implements Evidence {
 	@Override
 	public void setLocation(String newLocation) {
 		eDynamicSet(GovernancePackage.EVIDENCE__LOCATION, GovernancePackage.Literals.EVIDENCE__LOCATION, newLocation);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Date getCollected() {
-		return (Date)eDynamicGet(GovernancePackage.EVIDENCE__COLLECTED, GovernancePackage.Literals.EVIDENCE__COLLECTED, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setCollected(Date newCollected) {
-		eDynamicSet(GovernancePackage.EVIDENCE__COLLECTED, GovernancePackage.Literals.EVIDENCE__COLLECTED, newCollected);
 	}
 
 	/**
@@ -175,10 +268,19 @@ public class EvidenceImpl extends ModelElementImpl implements Evidence {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case GovernancePackage.EVIDENCE__BASE:
+				if (resolve) return getBase();
+				return basicGetBase();
+			case GovernancePackage.EVIDENCE__INSTANT:
+				return getInstant();
+			case GovernancePackage.EVIDENCE__DURATION:
+				return getDuration();
+			case GovernancePackage.EVIDENCE__LOWER_BOUNDS:
+				return getLowerBounds();
+			case GovernancePackage.EVIDENCE__UPPER_BOUNDS:
+				return getUpperBounds();
 			case GovernancePackage.EVIDENCE__LOCATION:
 				return getLocation();
-			case GovernancePackage.EVIDENCE__COLLECTED:
-				return getCollected();
 			case GovernancePackage.EVIDENCE__SOURCE:
 				return getSource();
 			case GovernancePackage.EVIDENCE__AUTOMATED:
@@ -192,14 +294,29 @@ public class EvidenceImpl extends ModelElementImpl implements Evidence {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case GovernancePackage.EVIDENCE__BASE:
+				setBase((Temporal)newValue);
+				return;
+			case GovernancePackage.EVIDENCE__INSTANT:
+				setInstant((Instant)newValue);
+				return;
+			case GovernancePackage.EVIDENCE__DURATION:
+				setDuration((Duration)newValue);
+				return;
+			case GovernancePackage.EVIDENCE__LOWER_BOUNDS:
+				getLowerBounds().clear();
+				getLowerBounds().addAll((Collection<? extends Temporal>)newValue);
+				return;
+			case GovernancePackage.EVIDENCE__UPPER_BOUNDS:
+				getUpperBounds().clear();
+				getUpperBounds().addAll((Collection<? extends Temporal>)newValue);
+				return;
 			case GovernancePackage.EVIDENCE__LOCATION:
 				setLocation((String)newValue);
-				return;
-			case GovernancePackage.EVIDENCE__COLLECTED:
-				setCollected((Date)newValue);
 				return;
 			case GovernancePackage.EVIDENCE__SOURCE:
 				setSource((String)newValue);
@@ -219,11 +336,23 @@ public class EvidenceImpl extends ModelElementImpl implements Evidence {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case GovernancePackage.EVIDENCE__BASE:
+				setBase((Temporal)null);
+				return;
+			case GovernancePackage.EVIDENCE__INSTANT:
+				setInstant(INSTANT_EDEFAULT);
+				return;
+			case GovernancePackage.EVIDENCE__DURATION:
+				setDuration(DURATION_EDEFAULT);
+				return;
+			case GovernancePackage.EVIDENCE__LOWER_BOUNDS:
+				getLowerBounds().clear();
+				return;
+			case GovernancePackage.EVIDENCE__UPPER_BOUNDS:
+				getUpperBounds().clear();
+				return;
 			case GovernancePackage.EVIDENCE__LOCATION:
 				setLocation(LOCATION_EDEFAULT);
-				return;
-			case GovernancePackage.EVIDENCE__COLLECTED:
-				setCollected(COLLECTED_EDEFAULT);
 				return;
 			case GovernancePackage.EVIDENCE__SOURCE:
 				setSource(SOURCE_EDEFAULT);
@@ -243,16 +372,64 @@ public class EvidenceImpl extends ModelElementImpl implements Evidence {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case GovernancePackage.EVIDENCE__BASE:
+				return basicGetBase() != null;
+			case GovernancePackage.EVIDENCE__INSTANT:
+				return INSTANT_EDEFAULT == null ? getInstant() != null : !INSTANT_EDEFAULT.equals(getInstant());
+			case GovernancePackage.EVIDENCE__DURATION:
+				return DURATION_EDEFAULT == null ? getDuration() != null : !DURATION_EDEFAULT.equals(getDuration());
+			case GovernancePackage.EVIDENCE__LOWER_BOUNDS:
+				return !getLowerBounds().isEmpty();
+			case GovernancePackage.EVIDENCE__UPPER_BOUNDS:
+				return !getUpperBounds().isEmpty();
 			case GovernancePackage.EVIDENCE__LOCATION:
 				return LOCATION_EDEFAULT == null ? getLocation() != null : !LOCATION_EDEFAULT.equals(getLocation());
-			case GovernancePackage.EVIDENCE__COLLECTED:
-				return COLLECTED_EDEFAULT == null ? getCollected() != null : !COLLECTED_EDEFAULT.equals(getCollected());
 			case GovernancePackage.EVIDENCE__SOURCE:
 				return SOURCE_EDEFAULT == null ? getSource() != null : !SOURCE_EDEFAULT.equals(getSource());
 			case GovernancePackage.EVIDENCE__AUTOMATED:
 				return isAutomated() != AUTOMATED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Temporal.class) {
+			switch (derivedFeatureID) {
+				case GovernancePackage.EVIDENCE__BASE: return NxcorePackage.TEMPORAL__BASE;
+				case GovernancePackage.EVIDENCE__INSTANT: return NxcorePackage.TEMPORAL__INSTANT;
+				case GovernancePackage.EVIDENCE__DURATION: return NxcorePackage.TEMPORAL__DURATION;
+				case GovernancePackage.EVIDENCE__LOWER_BOUNDS: return NxcorePackage.TEMPORAL__LOWER_BOUNDS;
+				case GovernancePackage.EVIDENCE__UPPER_BOUNDS: return NxcorePackage.TEMPORAL__UPPER_BOUNDS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Temporal.class) {
+			switch (baseFeatureID) {
+				case NxcorePackage.TEMPORAL__BASE: return GovernancePackage.EVIDENCE__BASE;
+				case NxcorePackage.TEMPORAL__INSTANT: return GovernancePackage.EVIDENCE__INSTANT;
+				case NxcorePackage.TEMPORAL__DURATION: return GovernancePackage.EVIDENCE__DURATION;
+				case NxcorePackage.TEMPORAL__LOWER_BOUNDS: return GovernancePackage.EVIDENCE__LOWER_BOUNDS;
+				case NxcorePackage.TEMPORAL__UPPER_BOUNDS: return GovernancePackage.EVIDENCE__UPPER_BOUNDS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //EvidenceImpl

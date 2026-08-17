@@ -161,7 +161,7 @@ class Risk extends ModelElement {
     RiskTreatment treatment
     refers Control[] mitigations opposite mitigates
     /* What the risk is about; anything governed. */
-    refers GovernedElement subject opposite risks
+    refers Governed subject opposite risks
 }
 
 /* ---- Governed elements ---- */
@@ -172,7 +172,7 @@ class Risk extends ModelElement {
  * class (possibly alongside lifecycle and role model classes) to acquire
  * the governance aspect: applied controls, risks, waivers.
  */
-abstract class GovernedElement extends ModelElement {
+abstract class Governed extends ModelElement {
     contains ControlApplication[] controlApplications opposite subject
     refers Risk[] risks opposite subject
     refers Waiver[] waivers opposite subject
@@ -198,7 +198,7 @@ enum ImplementationStatus {
  * TODO - to Staged and drop implementation status
  */
 class ControlApplication extends ModelElement {
-    container GovernedElement subject opposite controlApplications
+    container Governed subject opposite controlApplications
     refers Control control
     ImplementationStatus status
     Date lastVerified
@@ -233,7 +233,7 @@ class Assessment extends ModelElement, Period, org.nasdanika.models.role.Undergo
      * Assessing party: internal audit, second line, external auditor.
      */
     // String assessor
-    refers GovernedElement[] scope
+    refers Governed[] scope
     contains Finding[] findings
     contains Evidence[] evidence
 }
@@ -269,7 +269,7 @@ class Finding extends ModelElement {
  */
 class Waiver extends ModelElement, Period {
     refers Control control
-    refers GovernedElement subject opposite waivers
+    refers Governed subject opposite waivers
     /* Markdown justification and compensating measures. */
     String justification
 }

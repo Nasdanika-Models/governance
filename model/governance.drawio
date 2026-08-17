@@ -1,6 +1,6 @@
 <mxfile compressed="false" host="Electron">
   <diagram id="63ac4b34-944c-4f85-9235-0d1b47719a8b" name="governance">
-    <mxGraphModel dx="2293" dy="2252" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2866" dy="2603" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -210,7 +210,7 @@
             <mxGeometry relative="1" as="geometry" />
           </mxCell>
         </object>
-        <object label="GovernedElement" link="references/eClassifiers/GovernedElement/index.html" id="3bb9d6ee-a4e5-4da2-abc8-38ede40e4581">
+        <object label="Governed" link="references/eClassifiers/Governed/index.html" id="3bb9d6ee-a4e5-4da2-abc8-38ede40e4581">
           <mxCell parent="1" vertex="1">
             <mxGeometry height="30" width="120" x="310.0057736121613" y="-420.0011722343441" as="geometry" />
           </mxCell>

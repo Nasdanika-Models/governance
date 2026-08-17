@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.models.governance.Control;
 import org.nasdanika.models.governance.GovernancePackage;
-import org.nasdanika.models.governance.GovernedElement;
+import org.nasdanika.models.governance.Governed;
 import org.nasdanika.models.governance.Level;
 import org.nasdanika.models.governance.Risk;
 import org.nasdanika.models.governance.RiskTreatment;
@@ -259,8 +259,8 @@ public class RiskImpl extends ModelElementImpl implements Risk {
 	 * @generated
 	 */
 	@Override
-	public GovernedElement getSubject() {
-		return (GovernedElement)eDynamicGet(GovernancePackage.RISK__SUBJECT, GovernancePackage.Literals.RISK__SUBJECT, true, true);
+	public Governed getSubject() {
+		return (Governed)eDynamicGet(GovernancePackage.RISK__SUBJECT, GovernancePackage.Literals.RISK__SUBJECT, true, true);
 	}
 
 	/**
@@ -268,8 +268,8 @@ public class RiskImpl extends ModelElementImpl implements Risk {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GovernedElement basicGetSubject() {
-		return (GovernedElement)eDynamicGet(GovernancePackage.RISK__SUBJECT, GovernancePackage.Literals.RISK__SUBJECT, false, true);
+	public Governed basicGetSubject() {
+		return (Governed)eDynamicGet(GovernancePackage.RISK__SUBJECT, GovernancePackage.Literals.RISK__SUBJECT, false, true);
 	}
 
 	/**
@@ -277,7 +277,7 @@ public class RiskImpl extends ModelElementImpl implements Risk {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSubject(GovernedElement newSubject, NotificationChain msgs) {
+	public NotificationChain basicSetSubject(Governed newSubject, NotificationChain msgs) {
 		msgs = eDynamicInverseAdd((InternalEObject)newSubject, GovernancePackage.RISK__SUBJECT, msgs);
 		return msgs;
 	}
@@ -288,7 +288,7 @@ public class RiskImpl extends ModelElementImpl implements Risk {
 	 * @generated
 	 */
 	@Override
-	public void setSubject(GovernedElement newSubject) {
+	public void setSubject(Governed newSubject) {
 		eDynamicSet(GovernancePackage.RISK__SUBJECT, GovernancePackage.Literals.RISK__SUBJECT, newSubject);
 	}
 
@@ -304,10 +304,10 @@ public class RiskImpl extends ModelElementImpl implements Risk {
 			case GovernancePackage.RISK__MITIGATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMitigations()).basicAdd(otherEnd, msgs);
 			case GovernancePackage.RISK__SUBJECT:
-				GovernedElement subject = basicGetSubject();
+				Governed subject = basicGetSubject();
 				if (subject != null)
-					msgs = ((InternalEObject)subject).eInverseRemove(this, GovernancePackage.GOVERNED_ELEMENT__RISKS, GovernedElement.class, msgs);
-				return basicSetSubject((GovernedElement)otherEnd, msgs);
+					msgs = ((InternalEObject)subject).eInverseRemove(this, GovernancePackage.GOVERNED__RISKS, Governed.class, msgs);
+				return basicSetSubject((Governed)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -389,7 +389,7 @@ public class RiskImpl extends ModelElementImpl implements Risk {
 				getMitigations().addAll((Collection<? extends Control>)newValue);
 				return;
 			case GovernancePackage.RISK__SUBJECT:
-				setSubject((GovernedElement)newValue);
+				setSubject((Governed)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -425,7 +425,7 @@ public class RiskImpl extends ModelElementImpl implements Risk {
 				getMitigations().clear();
 				return;
 			case GovernancePackage.RISK__SUBJECT:
-				setSubject((GovernedElement)null);
+				setSubject((Governed)null);
 				return;
 		}
 		super.eUnset(featureID);

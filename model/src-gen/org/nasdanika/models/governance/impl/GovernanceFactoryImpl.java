@@ -57,7 +57,6 @@ public class GovernanceFactoryImpl extends EFactoryImpl implements GovernanceFac
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case GovernancePackage.PROPERTY: return createProperty();
 			case GovernancePackage.GOVERNANCE_PROGRAM: return createGovernanceProgram();
 			case GovernancePackage.FRAMEWORK: return createFramework();
 			case GovernancePackage.REQUIREMENT: return createRequirement();
@@ -122,17 +121,6 @@ public class GovernanceFactoryImpl extends EFactoryImpl implements GovernanceFac
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Property createProperty() {
-		PropertyImpl property = new PropertyImpl();
-		return property;
 	}
 
 	/**

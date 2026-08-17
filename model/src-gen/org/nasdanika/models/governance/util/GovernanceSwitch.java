@@ -12,8 +12,12 @@ import org.nasdanika.models.governance.*;
 import org.nasdanika.models.nxcore.Documented;
 import org.nasdanika.models.nxcore.Marked;
 import org.nasdanika.models.nxcore.ModelElement;
+import org.nasdanika.models.nxcore.Period;
 import org.nasdanika.models.nxcore.Referrable;
 import org.nasdanika.models.nxcore.StringIdentity;
+import org.nasdanika.models.nxcore.Temporal;
+
+import org.nasdanika.models.role.Undergoer;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,12 +76,6 @@ public class GovernanceSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case GovernancePackage.PROPERTY: {
-				Property property = (Property)theEObject;
-				T result = caseProperty(property);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case GovernancePackage.GOVERNANCE_PROGRAM: {
 				GovernanceProgram governanceProgram = (GovernanceProgram)theEObject;
 				T result = caseGovernanceProgram(governanceProgram);
@@ -144,14 +142,14 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GovernancePackage.GOVERNED_ELEMENT: {
-				GovernedElement governedElement = (GovernedElement)theEObject;
-				T result = caseGovernedElement(governedElement);
-				if (result == null) result = caseModelElement(governedElement);
-				if (result == null) result = caseStringIdentity(governedElement);
-				if (result == null) result = caseDocumented(governedElement);
-				if (result == null) result = caseMarked(governedElement);
-				if (result == null) result = caseReferrable(governedElement);
+			case GovernancePackage.GOVERNED: {
+				Governed governed = (Governed)theEObject;
+				T result = caseGoverned(governed);
+				if (result == null) result = caseModelElement(governed);
+				if (result == null) result = caseStringIdentity(governed);
+				if (result == null) result = caseDocumented(governed);
+				if (result == null) result = caseMarked(governed);
+				if (result == null) result = caseReferrable(governed);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -170,6 +168,7 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Evidence evidence = (Evidence)theEObject;
 				T result = caseEvidence(evidence);
 				if (result == null) result = caseModelElement(evidence);
+				if (result == null) result = caseTemporal(evidence);
 				if (result == null) result = caseStringIdentity(evidence);
 				if (result == null) result = caseDocumented(evidence);
 				if (result == null) result = caseMarked(evidence);
@@ -181,6 +180,8 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Assessment assessment = (Assessment)theEObject;
 				T result = caseAssessment(assessment);
 				if (result == null) result = caseModelElement(assessment);
+				if (result == null) result = casePeriod(assessment);
+				if (result == null) result = caseUndergoer(assessment);
 				if (result == null) result = caseStringIdentity(assessment);
 				if (result == null) result = caseDocumented(assessment);
 				if (result == null) result = caseMarked(assessment);
@@ -203,6 +204,7 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Waiver waiver = (Waiver)theEObject;
 				T result = caseWaiver(waiver);
 				if (result == null) result = caseModelElement(waiver);
+				if (result == null) result = casePeriod(waiver);
 				if (result == null) result = caseStringIdentity(waiver);
 				if (result == null) result = caseDocumented(waiver);
 				if (result == null) result = caseMarked(waiver);
@@ -212,21 +214,6 @@ public class GovernanceSwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Property</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Property</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseProperty(Property object) {
-		return null;
 	}
 
 	/**
@@ -320,17 +307,17 @@ public class GovernanceSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Governed Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Governed</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Governed Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Governed</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGovernedElement(GovernedElement object) {
+	public T caseGoverned(Governed object) {
 		return null;
 	}
 
@@ -481,6 +468,51 @@ public class GovernanceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseModelElement(ModelElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Temporal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Temporal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTemporal(Temporal object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Period</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Period</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePeriod(Period object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Undergoer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Undergoer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUndergoer(Undergoer object) {
 		return null;
 	}
 

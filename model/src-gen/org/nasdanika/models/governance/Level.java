@@ -14,7 +14,9 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
- *  Ordinal scale shared by likelihood, impact, and severity.
+ * *
+ * Ordinal scale shared by likelihood, impact, and severity.
+ * TODO - to a class
  * <!-- end-model-doc -->
  * @see org.nasdanika.models.governance.GovernancePackage#getLevel()
  * @model

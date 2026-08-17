@@ -13,6 +13,10 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Finding Status</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * *
+ * TODO - to stages
+ * <!-- end-model-doc -->
  * @see org.nasdanika.models.governance.GovernancePackage#getFindingStatus()
  * @model
  * @generated

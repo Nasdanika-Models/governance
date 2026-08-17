@@ -18,7 +18,7 @@ import org.nasdanika.models.governance.Control;
 import org.nasdanika.models.governance.ControlApplication;
 import org.nasdanika.models.governance.Evidence;
 import org.nasdanika.models.governance.GovernancePackage;
-import org.nasdanika.models.governance.GovernedElement;
+import org.nasdanika.models.governance.Governed;
 import org.nasdanika.models.governance.ImplementationStatus;
 
 import org.nasdanika.models.nxcore.impl.ModelElementImpl;
@@ -86,8 +86,8 @@ public class ControlApplicationImpl extends ModelElementImpl implements ControlA
 	 * @generated
 	 */
 	@Override
-	public GovernedElement getSubject() {
-		return (GovernedElement)eDynamicGet(GovernancePackage.CONTROL_APPLICATION__SUBJECT, GovernancePackage.Literals.CONTROL_APPLICATION__SUBJECT, true, true);
+	public Governed getSubject() {
+		return (Governed)eDynamicGet(GovernancePackage.CONTROL_APPLICATION__SUBJECT, GovernancePackage.Literals.CONTROL_APPLICATION__SUBJECT, true, true);
 	}
 
 	/**
@@ -95,8 +95,8 @@ public class ControlApplicationImpl extends ModelElementImpl implements ControlA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GovernedElement basicGetSubject() {
-		return (GovernedElement)eDynamicGet(GovernancePackage.CONTROL_APPLICATION__SUBJECT, GovernancePackage.Literals.CONTROL_APPLICATION__SUBJECT, false, true);
+	public Governed basicGetSubject() {
+		return (Governed)eDynamicGet(GovernancePackage.CONTROL_APPLICATION__SUBJECT, GovernancePackage.Literals.CONTROL_APPLICATION__SUBJECT, false, true);
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class ControlApplicationImpl extends ModelElementImpl implements ControlA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSubject(GovernedElement newSubject, NotificationChain msgs) {
+	public NotificationChain basicSetSubject(Governed newSubject, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newSubject, GovernancePackage.CONTROL_APPLICATION__SUBJECT, msgs);
 		return msgs;
 	}
@@ -115,7 +115,7 @@ public class ControlApplicationImpl extends ModelElementImpl implements ControlA
 	 * @generated
 	 */
 	@Override
-	public void setSubject(GovernedElement newSubject) {
+	public void setSubject(Governed newSubject) {
 		eDynamicSet(GovernancePackage.CONTROL_APPLICATION__SUBJECT, GovernancePackage.Literals.CONTROL_APPLICATION__SUBJECT, newSubject);
 	}
 
@@ -210,7 +210,7 @@ public class ControlApplicationImpl extends ModelElementImpl implements ControlA
 			case GovernancePackage.CONTROL_APPLICATION__SUBJECT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetSubject((GovernedElement)otherEnd, msgs);
+				return basicSetSubject((Governed)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -240,7 +240,7 @@ public class ControlApplicationImpl extends ModelElementImpl implements ControlA
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case GovernancePackage.CONTROL_APPLICATION__SUBJECT:
-				return eInternalContainer().eInverseRemove(this, GovernancePackage.GOVERNED_ELEMENT__CONTROL_APPLICATIONS, GovernedElement.class, msgs);
+				return eInternalContainer().eInverseRemove(this, GovernancePackage.GOVERNED__CONTROL_APPLICATIONS, Governed.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -279,7 +279,7 @@ public class ControlApplicationImpl extends ModelElementImpl implements ControlA
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case GovernancePackage.CONTROL_APPLICATION__SUBJECT:
-				setSubject((GovernedElement)newValue);
+				setSubject((Governed)newValue);
 				return;
 			case GovernancePackage.CONTROL_APPLICATION__CONTROL:
 				setControl((Control)newValue);
@@ -307,7 +307,7 @@ public class ControlApplicationImpl extends ModelElementImpl implements ControlA
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case GovernancePackage.CONTROL_APPLICATION__SUBJECT:
-				setSubject((GovernedElement)null);
+				setSubject((Governed)null);
 				return;
 			case GovernancePackage.CONTROL_APPLICATION__CONTROL:
 				setControl((Control)null);

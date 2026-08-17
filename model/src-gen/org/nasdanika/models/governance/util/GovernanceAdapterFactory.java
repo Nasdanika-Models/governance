@@ -14,8 +14,12 @@ import org.nasdanika.models.governance.*;
 import org.nasdanika.models.nxcore.Documented;
 import org.nasdanika.models.nxcore.Marked;
 import org.nasdanika.models.nxcore.ModelElement;
+import org.nasdanika.models.nxcore.Period;
 import org.nasdanika.models.nxcore.Referrable;
 import org.nasdanika.models.nxcore.StringIdentity;
+import org.nasdanika.models.nxcore.Temporal;
+
+import org.nasdanika.models.role.Undergoer;
 
 /**
  * <!-- begin-user-doc -->
@@ -74,10 +78,6 @@ public class GovernanceAdapterFactory extends AdapterFactoryImpl {
 	protected GovernanceSwitch<Adapter> modelSwitch =
 		new GovernanceSwitch<Adapter>() {
 			@Override
-			public Adapter caseProperty(Property object) {
-				return createPropertyAdapter();
-			}
-			@Override
 			public Adapter caseGovernanceProgram(GovernanceProgram object) {
 				return createGovernanceProgramAdapter();
 			}
@@ -102,8 +102,8 @@ public class GovernanceAdapterFactory extends AdapterFactoryImpl {
 				return createRiskAdapter();
 			}
 			@Override
-			public Adapter caseGovernedElement(GovernedElement object) {
-				return createGovernedElementAdapter();
+			public Adapter caseGoverned(Governed object) {
+				return createGovernedAdapter();
 			}
 			@Override
 			public Adapter caseControlApplication(ControlApplication object) {
@@ -146,6 +146,18 @@ public class GovernanceAdapterFactory extends AdapterFactoryImpl {
 				return createModelElementAdapter();
 			}
 			@Override
+			public Adapter caseTemporal(Temporal object) {
+				return createTemporalAdapter();
+			}
+			@Override
+			public Adapter casePeriod(Period object) {
+				return createPeriodAdapter();
+			}
+			@Override
+			public Adapter caseUndergoer(Undergoer object) {
+				return createUndergoerAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -164,20 +176,6 @@ public class GovernanceAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.governance.Property <em>Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.governance.Property
-	 * @generated
-	 */
-	public Adapter createPropertyAdapter() {
-		return null;
-	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.governance.GovernanceProgram <em>Program</em>}'.
@@ -264,16 +262,16 @@ public class GovernanceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.governance.GovernedElement <em>Governed Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.governance.Governed <em>Governed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.nasdanika.models.governance.GovernedElement
+	 * @see org.nasdanika.models.governance.Governed
 	 * @generated
 	 */
-	public Adapter createGovernedElementAdapter() {
+	public Adapter createGovernedAdapter() {
 		return null;
 	}
 
@@ -414,6 +412,48 @@ public class GovernanceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createModelElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.nxcore.Temporal <em>Temporal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.nxcore.Temporal
+	 * @generated
+	 */
+	public Adapter createTemporalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.nxcore.Period <em>Period</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.nxcore.Period
+	 * @generated
+	 */
+	public Adapter createPeriodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.role.Undergoer <em>Undergoer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.role.Undergoer
+	 * @generated
+	 */
+	public Adapter createUndergoerAdapter() {
 		return null;
 	}
 

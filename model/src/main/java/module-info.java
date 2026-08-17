@@ -1,7 +1,7 @@
 import org.nasdanika.capability.CapabilityFactory;
 import org.nasdanika.models.governance.capability.GovernanceEPackageResourceSetCapabilityFactory;
 
-module org.nasdanika.models.governance.Governance {
+module org.nasdanika.models.governance {
 	
 	exports org.nasdanika.models.governance;
 	exports org.nasdanika.models.governance.impl;

@@ -62,52 +62,6 @@ public interface GovernancePackage extends EPackage {
 	GovernancePackage eINSTANCE = org.nasdanika.models.governance.impl.GovernancePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.PropertyImpl <em>Property</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.governance.impl.PropertyImpl
-	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getProperty()
-	 * @generated
-	 */
-	int PROPERTY = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY__VALUE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Property</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Property</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.GovernanceProgramImpl <em>Program</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -115,7 +69,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getGovernanceProgram()
 	 * @generated
 	 */
-	int GOVERNANCE_PROGRAM = 1;
+	int GOVERNANCE_PROGRAM = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -296,7 +250,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getFramework()
 	 * @generated
 	 */
-	int FRAMEWORK = 2;
+	int FRAMEWORK = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -459,7 +413,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getRequirement()
 	 * @generated
 	 */
-	int REQUIREMENT = 3;
+	int REQUIREMENT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -604,7 +558,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getPolicy()
 	 * @generated
 	 */
-	int POLICY = 4;
+	int POLICY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -749,7 +703,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getControl()
 	 * @generated
 	 */
-	int CONTROL = 5;
+	int CONTROL = 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -912,7 +866,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getRisk()
 	 * @generated
 	 */
-	int RISK = 6;
+	int RISK = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1104,14 +1058,14 @@ public interface GovernancePackage extends EPackage {
 	int RISK_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.GovernedElementImpl <em>Governed Element</em>}' class.
+	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.GovernedImpl <em>Governed</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.governance.impl.GovernedElementImpl
-	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getGovernedElement()
+	 * @see org.nasdanika.models.governance.impl.GovernedImpl
+	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getGoverned()
 	 * @generated
 	 */
-	int GOVERNED_ELEMENT = 7;
+	int GOVERNED = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1120,7 +1074,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__ID = NxcorePackage.MODEL_ELEMENT__ID;
+	int GOVERNED__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1129,7 +1083,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
+	int GOVERNED__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
@@ -1138,7 +1092,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
+	int GOVERNED__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
 	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
@@ -1147,7 +1101,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+	int GOVERNED__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
 
 	/**
 	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
@@ -1156,7 +1110,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+	int GOVERNED__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
 
 	/**
 	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
@@ -1165,7 +1119,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+	int GOVERNED__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1174,7 +1128,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+	int GOVERNED__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Icon</b></em>' attribute.
@@ -1183,7 +1137,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+	int GOVERNED__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -1192,7 +1146,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
+	int GOVERNED__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Control Applications</b></em>' containment reference list.
@@ -1201,7 +1155,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__CONTROL_APPLICATIONS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int GOVERNED__CONTROL_APPLICATIONS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Risks</b></em>' reference list.
@@ -1210,7 +1164,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__RISKS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int GOVERNED__RISKS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Waivers</b></em>' reference list.
@@ -1219,16 +1173,16 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__WAIVERS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int GOVERNED__WAIVERS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Governed Element</em>' class.
+	 * The number of structural features of the '<em>Governed</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int GOVERNED_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -1237,7 +1191,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+	int GOVERNED___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
 
 	/**
 	 * The operation id for the '<em>Get Referrers</em>' operation.
@@ -1246,16 +1200,16 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
+	int GOVERNED___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
-	 * The number of operations of the '<em>Governed Element</em>' class.
+	 * The number of operations of the '<em>Governed</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int GOVERNED_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.ControlApplicationImpl <em>Control Application</em>}' class.
@@ -1265,7 +1219,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getControlApplication()
 	 * @generated
 	 */
-	int CONTROL_APPLICATION = 8;
+	int CONTROL_APPLICATION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1437,7 +1391,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getEvidence()
 	 * @generated
 	 */
-	int EVIDENCE = 9;
+	int EVIDENCE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1521,22 +1475,58 @@ public interface GovernancePackage extends EPackage {
 	int EVIDENCE__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
+	 * The feature id for the '<em><b>Base</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE__BASE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Instant</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE__INSTANT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE__DURATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Lower Bounds</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE__LOWER_BOUNDS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Upper Bounds</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE__UPPER_BOUNDS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Location</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__LOCATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Collected</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE__COLLECTED = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int EVIDENCE__LOCATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' attribute.
@@ -1545,7 +1535,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__SOURCE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int EVIDENCE__SOURCE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Automated</b></em>' attribute.
@@ -1554,7 +1544,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__AUTOMATED = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int EVIDENCE__AUTOMATED = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Evidence</em>' class.
@@ -1563,7 +1553,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int EVIDENCE_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -1600,7 +1590,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getAssessment()
 	 * @generated
 	 */
-	int ASSESSMENT = 10;
+	int ASSESSMENT = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1684,22 +1674,40 @@ public interface GovernancePackage extends EPackage {
 	int ASSESSMENT__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
-	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__DATE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int ASSESSMENT__DURATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Assessor</b></em>' attribute.
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__ASSESSOR = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int ASSESSMENT__START = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__END = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__ROLES = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Scope</b></em>' reference list.
@@ -1708,7 +1716,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__SCOPE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int ASSESSMENT__SCOPE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Findings</b></em>' containment reference list.
@@ -1717,7 +1725,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__FINDINGS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int ASSESSMENT__FINDINGS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' containment reference list.
@@ -1726,7 +1734,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__EVIDENCE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int ASSESSMENT__EVIDENCE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Assessment</em>' class.
@@ -1735,7 +1743,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
+	int ASSESSMENT_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -1772,7 +1780,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getFinding()
 	 * @generated
 	 */
-	int FINDING = 11;
+	int FINDING = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1944,7 +1952,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getWaiver()
 	 * @generated
 	 */
-	int WAIVER = 12;
+	int WAIVER = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2028,13 +2036,40 @@ public interface GovernancePackage extends EPackage {
 	int WAIVER__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIVER__DURATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIVER__START = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIVER__END = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Control</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__CONTROL = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int WAIVER__CONTROL = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -2043,7 +2078,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__SUBJECT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int WAIVER__SUBJECT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Justification</b></em>' attribute.
@@ -2052,16 +2087,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__JUSTIFICATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Expires</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WAIVER__EXPIRES = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int WAIVER__JUSTIFICATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Waiver</em>' class.
@@ -2070,7 +2096,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int WAIVER_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -2107,7 +2133,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getLevel()
 	 * @generated
 	 */
-	int LEVEL = 13;
+	int LEVEL = 12;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.ControlNature <em>Control Nature</em>}' enum.
@@ -2117,7 +2143,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getControlNature()
 	 * @generated
 	 */
-	int CONTROL_NATURE = 14;
+	int CONTROL_NATURE = 13;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.ControlAutomation <em>Control Automation</em>}' enum.
@@ -2127,7 +2153,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getControlAutomation()
 	 * @generated
 	 */
-	int CONTROL_AUTOMATION = 15;
+	int CONTROL_AUTOMATION = 14;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.RiskTreatment <em>Risk Treatment</em>}' enum.
@@ -2137,7 +2163,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getRiskTreatment()
 	 * @generated
 	 */
-	int RISK_TREATMENT = 16;
+	int RISK_TREATMENT = 15;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.ImplementationStatus <em>Implementation Status</em>}' enum.
@@ -2147,7 +2173,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getImplementationStatus()
 	 * @generated
 	 */
-	int IMPLEMENTATION_STATUS = 17;
+	int IMPLEMENTATION_STATUS = 16;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.FindingStatus <em>Finding Status</em>}' enum.
@@ -2157,40 +2183,8 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getFindingStatus()
 	 * @generated
 	 */
-	int FINDING_STATUS = 18;
+	int FINDING_STATUS = 17;
 
-
-	/**
-	 * Returns the meta object for class '{@link org.nasdanika.models.governance.Property <em>Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Property</em>'.
-	 * @see org.nasdanika.models.governance.Property
-	 * @generated
-	 */
-	EClass getProperty();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.Property#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.nasdanika.models.governance.Property#getName()
-	 * @see #getProperty()
-	 * @generated
-	 */
-	EAttribute getProperty_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.Property#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.nasdanika.models.governance.Property#getValue()
-	 * @see #getProperty()
-	 * @generated
-	 */
-	EAttribute getProperty_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.governance.GovernanceProgram <em>Program</em>}'.
@@ -2539,47 +2533,47 @@ public interface GovernancePackage extends EPackage {
 	EReference getRisk_Subject();
 
 	/**
-	 * Returns the meta object for class '{@link org.nasdanika.models.governance.GovernedElement <em>Governed Element</em>}'.
+	 * Returns the meta object for class '{@link org.nasdanika.models.governance.Governed <em>Governed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Governed Element</em>'.
-	 * @see org.nasdanika.models.governance.GovernedElement
+	 * @return the meta object for class '<em>Governed</em>'.
+	 * @see org.nasdanika.models.governance.Governed
 	 * @generated
 	 */
-	EClass getGovernedElement();
+	EClass getGoverned();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.governance.GovernedElement#getControlApplications <em>Control Applications</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.governance.Governed#getControlApplications <em>Control Applications</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Control Applications</em>'.
-	 * @see org.nasdanika.models.governance.GovernedElement#getControlApplications()
-	 * @see #getGovernedElement()
+	 * @see org.nasdanika.models.governance.Governed#getControlApplications()
+	 * @see #getGoverned()
 	 * @generated
 	 */
-	EReference getGovernedElement_ControlApplications();
+	EReference getGoverned_ControlApplications();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.nasdanika.models.governance.GovernedElement#getRisks <em>Risks</em>}'.
+	 * Returns the meta object for the reference list '{@link org.nasdanika.models.governance.Governed#getRisks <em>Risks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Risks</em>'.
-	 * @see org.nasdanika.models.governance.GovernedElement#getRisks()
-	 * @see #getGovernedElement()
+	 * @see org.nasdanika.models.governance.Governed#getRisks()
+	 * @see #getGoverned()
 	 * @generated
 	 */
-	EReference getGovernedElement_Risks();
+	EReference getGoverned_Risks();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.nasdanika.models.governance.GovernedElement#getWaivers <em>Waivers</em>}'.
+	 * Returns the meta object for the reference list '{@link org.nasdanika.models.governance.Governed#getWaivers <em>Waivers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Waivers</em>'.
-	 * @see org.nasdanika.models.governance.GovernedElement#getWaivers()
-	 * @see #getGovernedElement()
+	 * @see org.nasdanika.models.governance.Governed#getWaivers()
+	 * @see #getGoverned()
 	 * @generated
 	 */
-	EReference getGovernedElement_Waivers();
+	EReference getGoverned_Waivers();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.governance.ControlApplication <em>Control Application</em>}'.
@@ -2668,17 +2662,6 @@ public interface GovernancePackage extends EPackage {
 	EAttribute getEvidence_Location();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.Evidence#getCollected <em>Collected</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Collected</em>'.
-	 * @see org.nasdanika.models.governance.Evidence#getCollected()
-	 * @see #getEvidence()
-	 * @generated
-	 */
-	EAttribute getEvidence_Collected();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.Evidence#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2709,28 +2692,6 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAssessment();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.Assessment#getDate <em>Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Date</em>'.
-	 * @see org.nasdanika.models.governance.Assessment#getDate()
-	 * @see #getAssessment()
-	 * @generated
-	 */
-	EAttribute getAssessment_Date();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.Assessment#getAssessor <em>Assessor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Assessor</em>'.
-	 * @see org.nasdanika.models.governance.Assessment#getAssessor()
-	 * @see #getAssessment()
-	 * @generated
-	 */
-	EAttribute getAssessment_Assessor();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.nasdanika.models.governance.Assessment#getScope <em>Scope</em>}'.
@@ -2874,17 +2835,6 @@ public interface GovernancePackage extends EPackage {
 	EAttribute getWaiver_Justification();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.Waiver#getExpires <em>Expires</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Expires</em>'.
-	 * @see org.nasdanika.models.governance.Waiver#getExpires()
-	 * @see #getWaiver()
-	 * @generated
-	 */
-	EAttribute getWaiver_Expires();
-
-	/**
 	 * Returns the meta object for enum '{@link org.nasdanika.models.governance.Level <em>Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2967,32 +2917,6 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
-		/**
-		 * The meta object literal for the '{@link org.nasdanika.models.governance.impl.PropertyImpl <em>Property</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.models.governance.impl.PropertyImpl
-		 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getProperty()
-		 * @generated
-		 */
-		EClass PROPERTY = eINSTANCE.getProperty();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROPERTY__NAME = eINSTANCE.getProperty_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROPERTY__VALUE = eINSTANCE.getProperty_Value();
-
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.governance.impl.GovernanceProgramImpl <em>Program</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -3262,14 +3186,14 @@ public interface GovernancePackage extends EPackage {
 		EReference RISK__SUBJECT = eINSTANCE.getRisk_Subject();
 
 		/**
-		 * The meta object literal for the '{@link org.nasdanika.models.governance.impl.GovernedElementImpl <em>Governed Element</em>}' class.
+		 * The meta object literal for the '{@link org.nasdanika.models.governance.impl.GovernedImpl <em>Governed</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.models.governance.impl.GovernedElementImpl
-		 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getGovernedElement()
+		 * @see org.nasdanika.models.governance.impl.GovernedImpl
+		 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getGoverned()
 		 * @generated
 		 */
-		EClass GOVERNED_ELEMENT = eINSTANCE.getGovernedElement();
+		EClass GOVERNED = eINSTANCE.getGoverned();
 
 		/**
 		 * The meta object literal for the '<em><b>Control Applications</b></em>' containment reference list feature.
@@ -3277,7 +3201,7 @@ public interface GovernancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GOVERNED_ELEMENT__CONTROL_APPLICATIONS = eINSTANCE.getGovernedElement_ControlApplications();
+		EReference GOVERNED__CONTROL_APPLICATIONS = eINSTANCE.getGoverned_ControlApplications();
 
 		/**
 		 * The meta object literal for the '<em><b>Risks</b></em>' reference list feature.
@@ -3285,7 +3209,7 @@ public interface GovernancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GOVERNED_ELEMENT__RISKS = eINSTANCE.getGovernedElement_Risks();
+		EReference GOVERNED__RISKS = eINSTANCE.getGoverned_Risks();
 
 		/**
 		 * The meta object literal for the '<em><b>Waivers</b></em>' reference list feature.
@@ -3293,7 +3217,7 @@ public interface GovernancePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GOVERNED_ELEMENT__WAIVERS = eINSTANCE.getGovernedElement_Waivers();
+		EReference GOVERNED__WAIVERS = eINSTANCE.getGoverned_Waivers();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.governance.impl.ControlApplicationImpl <em>Control Application</em>}' class.
@@ -3364,14 +3288,6 @@ public interface GovernancePackage extends EPackage {
 		EAttribute EVIDENCE__LOCATION = eINSTANCE.getEvidence_Location();
 
 		/**
-		 * The meta object literal for the '<em><b>Collected</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EVIDENCE__COLLECTED = eINSTANCE.getEvidence_Collected();
-
-		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3396,22 +3312,6 @@ public interface GovernancePackage extends EPackage {
 		 * @generated
 		 */
 		EClass ASSESSMENT = eINSTANCE.getAssessment();
-
-		/**
-		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSESSMENT__DATE = eINSTANCE.getAssessment_Date();
-
-		/**
-		 * The meta object literal for the '<em><b>Assessor</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSESSMENT__ASSESSOR = eINSTANCE.getAssessment_Assessor();
 
 		/**
 		 * The meta object literal for the '<em><b>Scope</b></em>' reference list feature.
@@ -3520,14 +3420,6 @@ public interface GovernancePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WAIVER__JUSTIFICATION = eINSTANCE.getWaiver_Justification();
-
-		/**
-		 * The meta object literal for the '<em><b>Expires</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WAIVER__EXPIRES = eINSTANCE.getWaiver_Expires();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.governance.Level <em>Level</em>}' enum.

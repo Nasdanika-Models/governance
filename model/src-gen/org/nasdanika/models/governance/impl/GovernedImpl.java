@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.models.governance.ControlApplication;
 import org.nasdanika.models.governance.GovernancePackage;
-import org.nasdanika.models.governance.GovernedElement;
+import org.nasdanika.models.governance.Governed;
 import org.nasdanika.models.governance.Risk;
 import org.nasdanika.models.governance.Waiver;
 
@@ -23,26 +23,26 @@ import org.nasdanika.models.nxcore.impl.ModelElementImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Governed Element</b></em>'.
+ * An implementation of the model object '<em><b>Governed</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.governance.impl.GovernedElementImpl#getControlApplications <em>Control Applications</em>}</li>
- *   <li>{@link org.nasdanika.models.governance.impl.GovernedElementImpl#getRisks <em>Risks</em>}</li>
- *   <li>{@link org.nasdanika.models.governance.impl.GovernedElementImpl#getWaivers <em>Waivers</em>}</li>
+ *   <li>{@link org.nasdanika.models.governance.impl.GovernedImpl#getControlApplications <em>Control Applications</em>}</li>
+ *   <li>{@link org.nasdanika.models.governance.impl.GovernedImpl#getRisks <em>Risks</em>}</li>
+ *   <li>{@link org.nasdanika.models.governance.impl.GovernedImpl#getWaivers <em>Waivers</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class GovernedElementImpl extends ModelElementImpl implements GovernedElement {
+public abstract class GovernedImpl extends ModelElementImpl implements Governed {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GovernedElementImpl() {
+	protected GovernedImpl() {
 		super();
 	}
 
@@ -53,7 +53,7 @@ public abstract class GovernedElementImpl extends ModelElementImpl implements Go
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GovernancePackage.Literals.GOVERNED_ELEMENT;
+		return GovernancePackage.Literals.GOVERNED;
 	}
 
 	/**
@@ -64,7 +64,7 @@ public abstract class GovernedElementImpl extends ModelElementImpl implements Go
 	@SuppressWarnings("unchecked")
 	@Override
 	public EList<ControlApplication> getControlApplications() {
-		return (EList<ControlApplication>)eDynamicGet(GovernancePackage.GOVERNED_ELEMENT__CONTROL_APPLICATIONS, GovernancePackage.Literals.GOVERNED_ELEMENT__CONTROL_APPLICATIONS, true, true);
+		return (EList<ControlApplication>)eDynamicGet(GovernancePackage.GOVERNED__CONTROL_APPLICATIONS, GovernancePackage.Literals.GOVERNED__CONTROL_APPLICATIONS, true, true);
 	}
 
 	/**
@@ -75,7 +75,7 @@ public abstract class GovernedElementImpl extends ModelElementImpl implements Go
 	@SuppressWarnings("unchecked")
 	@Override
 	public EList<Risk> getRisks() {
-		return (EList<Risk>)eDynamicGet(GovernancePackage.GOVERNED_ELEMENT__RISKS, GovernancePackage.Literals.GOVERNED_ELEMENT__RISKS, true, true);
+		return (EList<Risk>)eDynamicGet(GovernancePackage.GOVERNED__RISKS, GovernancePackage.Literals.GOVERNED__RISKS, true, true);
 	}
 
 	/**
@@ -86,7 +86,7 @@ public abstract class GovernedElementImpl extends ModelElementImpl implements Go
 	@SuppressWarnings("unchecked")
 	@Override
 	public EList<Waiver> getWaivers() {
-		return (EList<Waiver>)eDynamicGet(GovernancePackage.GOVERNED_ELEMENT__WAIVERS, GovernancePackage.Literals.GOVERNED_ELEMENT__WAIVERS, true, true);
+		return (EList<Waiver>)eDynamicGet(GovernancePackage.GOVERNED__WAIVERS, GovernancePackage.Literals.GOVERNED__WAIVERS, true, true);
 	}
 
 	/**
@@ -98,11 +98,11 @@ public abstract class GovernedElementImpl extends ModelElementImpl implements Go
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GovernancePackage.GOVERNED_ELEMENT__CONTROL_APPLICATIONS:
+			case GovernancePackage.GOVERNED__CONTROL_APPLICATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getControlApplications()).basicAdd(otherEnd, msgs);
-			case GovernancePackage.GOVERNED_ELEMENT__RISKS:
+			case GovernancePackage.GOVERNED__RISKS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRisks()).basicAdd(otherEnd, msgs);
-			case GovernancePackage.GOVERNED_ELEMENT__WAIVERS:
+			case GovernancePackage.GOVERNED__WAIVERS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getWaivers()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -116,11 +116,11 @@ public abstract class GovernedElementImpl extends ModelElementImpl implements Go
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GovernancePackage.GOVERNED_ELEMENT__CONTROL_APPLICATIONS:
+			case GovernancePackage.GOVERNED__CONTROL_APPLICATIONS:
 				return ((InternalEList<?>)getControlApplications()).basicRemove(otherEnd, msgs);
-			case GovernancePackage.GOVERNED_ELEMENT__RISKS:
+			case GovernancePackage.GOVERNED__RISKS:
 				return ((InternalEList<?>)getRisks()).basicRemove(otherEnd, msgs);
-			case GovernancePackage.GOVERNED_ELEMENT__WAIVERS:
+			case GovernancePackage.GOVERNED__WAIVERS:
 				return ((InternalEList<?>)getWaivers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -134,11 +134,11 @@ public abstract class GovernedElementImpl extends ModelElementImpl implements Go
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GovernancePackage.GOVERNED_ELEMENT__CONTROL_APPLICATIONS:
+			case GovernancePackage.GOVERNED__CONTROL_APPLICATIONS:
 				return getControlApplications();
-			case GovernancePackage.GOVERNED_ELEMENT__RISKS:
+			case GovernancePackage.GOVERNED__RISKS:
 				return getRisks();
-			case GovernancePackage.GOVERNED_ELEMENT__WAIVERS:
+			case GovernancePackage.GOVERNED__WAIVERS:
 				return getWaivers();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,15 +153,15 @@ public abstract class GovernedElementImpl extends ModelElementImpl implements Go
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GovernancePackage.GOVERNED_ELEMENT__CONTROL_APPLICATIONS:
+			case GovernancePackage.GOVERNED__CONTROL_APPLICATIONS:
 				getControlApplications().clear();
 				getControlApplications().addAll((Collection<? extends ControlApplication>)newValue);
 				return;
-			case GovernancePackage.GOVERNED_ELEMENT__RISKS:
+			case GovernancePackage.GOVERNED__RISKS:
 				getRisks().clear();
 				getRisks().addAll((Collection<? extends Risk>)newValue);
 				return;
-			case GovernancePackage.GOVERNED_ELEMENT__WAIVERS:
+			case GovernancePackage.GOVERNED__WAIVERS:
 				getWaivers().clear();
 				getWaivers().addAll((Collection<? extends Waiver>)newValue);
 				return;
@@ -177,13 +177,13 @@ public abstract class GovernedElementImpl extends ModelElementImpl implements Go
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GovernancePackage.GOVERNED_ELEMENT__CONTROL_APPLICATIONS:
+			case GovernancePackage.GOVERNED__CONTROL_APPLICATIONS:
 				getControlApplications().clear();
 				return;
-			case GovernancePackage.GOVERNED_ELEMENT__RISKS:
+			case GovernancePackage.GOVERNED__RISKS:
 				getRisks().clear();
 				return;
-			case GovernancePackage.GOVERNED_ELEMENT__WAIVERS:
+			case GovernancePackage.GOVERNED__WAIVERS:
 				getWaivers().clear();
 				return;
 		}
@@ -198,14 +198,14 @@ public abstract class GovernedElementImpl extends ModelElementImpl implements Go
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GovernancePackage.GOVERNED_ELEMENT__CONTROL_APPLICATIONS:
+			case GovernancePackage.GOVERNED__CONTROL_APPLICATIONS:
 				return !getControlApplications().isEmpty();
-			case GovernancePackage.GOVERNED_ELEMENT__RISKS:
+			case GovernancePackage.GOVERNED__RISKS:
 				return !getRisks().isEmpty();
-			case GovernancePackage.GOVERNED_ELEMENT__WAIVERS:
+			case GovernancePackage.GOVERNED__WAIVERS:
 				return !getWaivers().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //GovernedElementImpl
+} //GovernedImpl

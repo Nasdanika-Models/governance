@@ -2,9 +2,8 @@
  */
 package org.nasdanika.models.governance;
 
-import java.util.Date;
-
 import org.nasdanika.models.nxcore.ModelElement;
+import org.nasdanika.models.nxcore.Period;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,14 +23,13 @@ import org.nasdanika.models.nxcore.ModelElement;
  *   <li>{@link org.nasdanika.models.governance.Waiver#getControl <em>Control</em>}</li>
  *   <li>{@link org.nasdanika.models.governance.Waiver#getSubject <em>Subject</em>}</li>
  *   <li>{@link org.nasdanika.models.governance.Waiver#getJustification <em>Justification</em>}</li>
- *   <li>{@link org.nasdanika.models.governance.Waiver#getExpires <em>Expires</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.governance.GovernancePackage#getWaiver()
  * @model
  * @generated
  */
-public interface Waiver extends ModelElement {
+public interface Waiver extends ModelElement, Period {
 	/**
 	 * Returns the value of the '<em><b>Control</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -56,17 +54,17 @@ public interface Waiver extends ModelElement {
 
 	/**
 	 * Returns the value of the '<em><b>Subject</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.governance.GovernedElement#getWaivers <em>Waivers</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.governance.Governed#getWaivers <em>Waivers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Subject</em>' reference.
-	 * @see #setSubject(GovernedElement)
+	 * @see #setSubject(Governed)
 	 * @see org.nasdanika.models.governance.GovernancePackage#getWaiver_Subject()
-	 * @see org.nasdanika.models.governance.GovernedElement#getWaivers
+	 * @see org.nasdanika.models.governance.Governed#getWaivers
 	 * @model opposite="waivers"
 	 * @generated
 	 */
-	GovernedElement getSubject();
+	Governed getSubject();
 
 	/**
 	 * Sets the value of the '{@link org.nasdanika.models.governance.Waiver#getSubject <em>Subject</em>}' reference.
@@ -76,7 +74,7 @@ public interface Waiver extends ModelElement {
 	 * @see #getSubject()
 	 * @generated
 	 */
-	void setSubject(GovernedElement value);
+	void setSubject(Governed value);
 
 	/**
 	 * Returns the value of the '<em><b>Justification</b></em>' attribute.
@@ -102,27 +100,5 @@ public interface Waiver extends ModelElement {
 	 * @generated
 	 */
 	void setJustification(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Expires</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expires</em>' attribute.
-	 * @see #setExpires(Date)
-	 * @see org.nasdanika.models.governance.GovernancePackage#getWaiver_Expires()
-	 * @model unique="false"
-	 * @generated
-	 */
-	Date getExpires();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.governance.Waiver#getExpires <em>Expires</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expires</em>' attribute.
-	 * @see #getExpires()
-	 * @generated
-	 */
-	void setExpires(Date value);
 
 } // Waiver

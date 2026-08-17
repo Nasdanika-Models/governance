@@ -200,20 +200,20 @@ public interface Risk extends ModelElement {
 
 	/**
 	 * Returns the value of the '<em><b>Subject</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.governance.GovernedElement#getRisks <em>Risks</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.nasdanika.models.governance.Governed#getRisks <em>Risks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 *  What the risk is about; anything governed.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Subject</em>' reference.
-	 * @see #setSubject(GovernedElement)
+	 * @see #setSubject(Governed)
 	 * @see org.nasdanika.models.governance.GovernancePackage#getRisk_Subject()
-	 * @see org.nasdanika.models.governance.GovernedElement#getRisks
+	 * @see org.nasdanika.models.governance.Governed#getRisks
 	 * @model opposite="risks"
 	 * @generated
 	 */
-	GovernedElement getSubject();
+	Governed getSubject();
 
 	/**
 	 * Sets the value of the '{@link org.nasdanika.models.governance.Risk#getSubject <em>Subject</em>}' reference.
@@ -223,6 +223,6 @@ public interface Risk extends ModelElement {
 	 * @see #getSubject()
 	 * @generated
 	 */
-	void setSubject(GovernedElement value);
+	void setSubject(Governed value);
 
 } // Risk
