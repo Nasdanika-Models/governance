@@ -9,31 +9,18 @@
 )
 package org.nasdanika.models.governance
 
+import org.nasdanika.models.nxcore.ModelElement
+import org.nasdanika.models.nxcore.Temporal
+import org.nasdanika.models.nxcore.Period
+
 annotation "http://www.eclipse.org/emf/2002/Ecore" as Ecore
 annotation "http://www.eclipse.org/emf/2002/GenModel" as GenModel
 annotation "urn:org.nasdanika" as Nasdanika
 
-
-/* ---- Base ---- */
-
-abstract class ModelElement {
-    id String identifier
-    String name
-    /* Short summary. */
-    String description
-    /* Markdown documentation for humans, used by documentation generation. */
-    String documentation
-    String[] tags
-    /* Generic string properties: extension/annotation carrier, same technique as the Diagram and MCP models. */
-    contains Property[] properties
-}
-
-class Property {
-    String name
-    String value
-}
-
-/* Ordinal scale shared by likelihood, impact, and severity. */
+/**
+ * Ordinal scale shared by likelihood, impact, and severity.
+ * TODO - to a class
+ */
 enum Level {
     VERY_LOW
     LOW
@@ -49,6 +36,7 @@ enum Level {
  * the controls it operates, the risks it tracks, and the record of
  * assessments and waivers. An organization may have several programs
  * (AI governance, information security, financial controls) sharing controls.
+ * TODO - extend relevant domains e.g. actor domain from Role
  */
 class GovernanceProgram extends ModelElement {
     contains Framework[] frameworks
@@ -100,6 +88,9 @@ class Policy extends ModelElement {
 
 /* ---- Controls ---- */
 
+/**
+ * TODO - to a class contained in the governance program (domain)
+ */
 enum ControlNature {
     /* Stops the bad thing from happening: input validation, access control. */
     PREVENTIVE
@@ -113,6 +104,9 @@ enum ControlNature {
     COMPENSATING
 }
 
+/**
+ * TODO - to a class contained in the governance domain
+ */
 enum ControlAutomation {
     MANUAL
     /* Manual with automated support, e.g. human review of automated flags. */
@@ -130,12 +124,18 @@ class Control extends ModelElement {
     ControlAutomation automation
     /* Crosswalk: requirements in any number of frameworks this control satisfies. */
     refers Requirement[] satisfies
-    /* Risks this control mitigates. */
-    refers Risk[] mitigates opposite mitigations
+    /**
+     * Risks this control mitigates.
+     * TODO - computed opposites to allow risks and controls to evolve in independent resources
+     */
+    refers Risk[] mitigates opposite mitigations 
 }
 
 /* ---- Risks ---- */
 
+/**
+ * TODO - to a class
+ */
 enum RiskTreatment {
     /* Documented decision to live with it; pairs with the decision model. */
     ACCEPT
@@ -153,7 +153,7 @@ enum RiskTreatment {
  * provides a typed AI risk taxonomy.
  */
 class Risk extends ModelElement {
-    String category
+    String category // TODO - reference, hierarchy, risk domain
     Level inherentLikelihood
     Level inherentImpact
     Level residualLikelihood
@@ -178,6 +178,9 @@ abstract class GovernedElement extends ModelElement {
     refers Waiver[] waivers opposite subject
 }
 
+/**
+ * TODO - to class, maybe extending stage or just stage
+ */
 enum ImplementationStatus {
     PLANNED
     IN_PROGRESS
@@ -192,6 +195,7 @@ enum ImplementationStatus {
 /*
  * The application of a control to a governed element: the unit of compliance
  * status. "Control X on system Y is VERIFIED, and here is the evidence."
+ * TODO - to Staged and drop implementation status
  */
 class ControlApplication extends ModelElement {
     container GovernedElement subject opposite controlApplications
@@ -209,10 +213,9 @@ class ControlApplication extends ModelElement {
  * is continuous control monitoring. The ai-governance extension adds typed
  * evidence: model cards, evaluations, telemetry.
  */
-class Evidence extends ModelElement {
+class Evidence extends ModelElement, Temporal {
     /* URI of the artifact: document, dashboard, query, repository path. */
     String location
-    Date collected
     /* Producing party or system. */
     String source
     boolean automated
@@ -225,15 +228,19 @@ class Evidence extends ModelElement {
  * an audit, a review, a self-assessment. The ai-governance extension
  * adds impact assessments.
  */
-class Assessment extends ModelElement {
-    Date date
-    /* Assessing party: internal audit, second line, external auditor. */
-    String assessor
+class Assessment extends ModelElement, Period, org.nasdanika.models.role.Undergoer {
+    /**
+     * Assessing party: internal audit, second line, external auditor.
+     */
+    // String assessor
     refers GovernedElement[] scope
     contains Finding[] findings
     contains Evidence[] evidence
 }
 
+/**
+ * TODO - to stages
+ */
 enum FindingStatus {
     OPEN
     IN_REMEDIATION
@@ -242,6 +249,9 @@ enum FindingStatus {
     ACCEPTED
 }
 
+/**
+ * TODO - to staged
+ */
 class Finding extends ModelElement {
     Level severity
     FindingStatus status
@@ -257,10 +267,9 @@ class Finding extends ModelElement {
  * Governance without waivers is fiction; modeling them keeps the record honest.
  * Approval records (who, in what role) come from the role model.
  */
-class Waiver extends ModelElement {
+class Waiver extends ModelElement, Period {
     refers Control control
     refers GovernedElement subject opposite waivers
     /* Markdown justification and compensating measures. */
     String justification
-    Date expires
 }

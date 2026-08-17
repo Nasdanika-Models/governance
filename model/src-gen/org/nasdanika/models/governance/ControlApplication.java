@@ -6,6 +6,8 @@ import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.nasdanika.models.nxcore.ModelElement;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Control Application</b></em>'.

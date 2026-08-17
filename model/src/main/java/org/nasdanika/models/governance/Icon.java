@@ -5,7 +5,7 @@ import org.eclipse.emf.ecore.EObject;
 
 public enum Icon {
 	
-    DOCUMENT(GovernancePackage.Literals.DOCUMENT, "governance.svg");
+    DOCUMENT(GovernancePackage.Literals.ASSESSMENT, "assessment.svg");
 
     private static final String BASE_URL = "https://governance.models.nasdanika.org/images/";
 

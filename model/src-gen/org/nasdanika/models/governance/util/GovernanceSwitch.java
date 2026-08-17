@@ -9,6 +9,12 @@ import org.eclipse.emf.ecore.util.Switch;
 
 import org.nasdanika.models.governance.*;
 
+import org.nasdanika.models.nxcore.Documented;
+import org.nasdanika.models.nxcore.Marked;
+import org.nasdanika.models.nxcore.ModelElement;
+import org.nasdanika.models.nxcore.Referrable;
+import org.nasdanika.models.nxcore.StringIdentity;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Switch</b> for the model's inheritance hierarchy.
@@ -66,12 +72,6 @@ public class GovernanceSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case GovernancePackage.MODEL_ELEMENT: {
-				ModelElement modelElement = (ModelElement)theEObject;
-				T result = caseModelElement(modelElement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case GovernancePackage.PROPERTY: {
 				Property property = (Property)theEObject;
 				T result = caseProperty(property);
@@ -82,6 +82,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				GovernanceProgram governanceProgram = (GovernanceProgram)theEObject;
 				T result = caseGovernanceProgram(governanceProgram);
 				if (result == null) result = caseModelElement(governanceProgram);
+				if (result == null) result = caseStringIdentity(governanceProgram);
+				if (result == null) result = caseDocumented(governanceProgram);
+				if (result == null) result = caseMarked(governanceProgram);
+				if (result == null) result = caseReferrable(governanceProgram);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -89,6 +93,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Framework framework = (Framework)theEObject;
 				T result = caseFramework(framework);
 				if (result == null) result = caseModelElement(framework);
+				if (result == null) result = caseStringIdentity(framework);
+				if (result == null) result = caseDocumented(framework);
+				if (result == null) result = caseMarked(framework);
+				if (result == null) result = caseReferrable(framework);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -96,6 +104,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Requirement requirement = (Requirement)theEObject;
 				T result = caseRequirement(requirement);
 				if (result == null) result = caseModelElement(requirement);
+				if (result == null) result = caseStringIdentity(requirement);
+				if (result == null) result = caseDocumented(requirement);
+				if (result == null) result = caseMarked(requirement);
+				if (result == null) result = caseReferrable(requirement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -103,6 +115,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Policy policy = (Policy)theEObject;
 				T result = casePolicy(policy);
 				if (result == null) result = caseModelElement(policy);
+				if (result == null) result = caseStringIdentity(policy);
+				if (result == null) result = caseDocumented(policy);
+				if (result == null) result = caseMarked(policy);
+				if (result == null) result = caseReferrable(policy);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -110,6 +126,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Control control = (Control)theEObject;
 				T result = caseControl(control);
 				if (result == null) result = caseModelElement(control);
+				if (result == null) result = caseStringIdentity(control);
+				if (result == null) result = caseDocumented(control);
+				if (result == null) result = caseMarked(control);
+				if (result == null) result = caseReferrable(control);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -117,6 +137,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Risk risk = (Risk)theEObject;
 				T result = caseRisk(risk);
 				if (result == null) result = caseModelElement(risk);
+				if (result == null) result = caseStringIdentity(risk);
+				if (result == null) result = caseDocumented(risk);
+				if (result == null) result = caseMarked(risk);
+				if (result == null) result = caseReferrable(risk);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -124,6 +148,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				GovernedElement governedElement = (GovernedElement)theEObject;
 				T result = caseGovernedElement(governedElement);
 				if (result == null) result = caseModelElement(governedElement);
+				if (result == null) result = caseStringIdentity(governedElement);
+				if (result == null) result = caseDocumented(governedElement);
+				if (result == null) result = caseMarked(governedElement);
+				if (result == null) result = caseReferrable(governedElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -131,6 +159,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				ControlApplication controlApplication = (ControlApplication)theEObject;
 				T result = caseControlApplication(controlApplication);
 				if (result == null) result = caseModelElement(controlApplication);
+				if (result == null) result = caseStringIdentity(controlApplication);
+				if (result == null) result = caseDocumented(controlApplication);
+				if (result == null) result = caseMarked(controlApplication);
+				if (result == null) result = caseReferrable(controlApplication);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -138,6 +170,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Evidence evidence = (Evidence)theEObject;
 				T result = caseEvidence(evidence);
 				if (result == null) result = caseModelElement(evidence);
+				if (result == null) result = caseStringIdentity(evidence);
+				if (result == null) result = caseDocumented(evidence);
+				if (result == null) result = caseMarked(evidence);
+				if (result == null) result = caseReferrable(evidence);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -145,6 +181,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Assessment assessment = (Assessment)theEObject;
 				T result = caseAssessment(assessment);
 				if (result == null) result = caseModelElement(assessment);
+				if (result == null) result = caseStringIdentity(assessment);
+				if (result == null) result = caseDocumented(assessment);
+				if (result == null) result = caseMarked(assessment);
+				if (result == null) result = caseReferrable(assessment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -152,6 +192,10 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Finding finding = (Finding)theEObject;
 				T result = caseFinding(finding);
 				if (result == null) result = caseModelElement(finding);
+				if (result == null) result = caseStringIdentity(finding);
+				if (result == null) result = caseDocumented(finding);
+				if (result == null) result = caseMarked(finding);
+				if (result == null) result = caseReferrable(finding);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -159,26 +203,15 @@ public class GovernanceSwitch<T> extends Switch<T> {
 				Waiver waiver = (Waiver)theEObject;
 				T result = caseWaiver(waiver);
 				if (result == null) result = caseModelElement(waiver);
+				if (result == null) result = caseStringIdentity(waiver);
+				if (result == null) result = caseDocumented(waiver);
+				if (result == null) result = caseMarked(waiver);
+				if (result == null) result = caseReferrable(waiver);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Model Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Model Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseModelElement(ModelElement object) {
-		return null;
 	}
 
 	/**
@@ -373,6 +406,81 @@ public class GovernanceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseWaiver(Waiver object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Referrable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Referrable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReferrable(Referrable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String Identity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String Identity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringIdentity(StringIdentity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Documented</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Documented</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDocumented(Documented object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Marked</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Marked</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMarked(Marked object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Model Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Model Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModelElement(ModelElement object) {
 		return null;
 	}
 

@@ -26,13 +26,14 @@ import org.nasdanika.models.governance.GovernanceProgram;
 import org.nasdanika.models.governance.GovernedElement;
 import org.nasdanika.models.governance.ImplementationStatus;
 import org.nasdanika.models.governance.Level;
-import org.nasdanika.models.governance.ModelElement;
 import org.nasdanika.models.governance.Policy;
 import org.nasdanika.models.governance.Property;
 import org.nasdanika.models.governance.Requirement;
 import org.nasdanika.models.governance.Risk;
 import org.nasdanika.models.governance.RiskTreatment;
 import org.nasdanika.models.governance.Waiver;
+
+import org.nasdanika.models.nxcore.NxcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,13 +42,6 @@ import org.nasdanika.models.governance.Waiver;
  * @generated
  */
 public class GovernancePackageImpl extends EPackageImpl implements GovernancePackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass modelElementEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -229,6 +223,7 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 
 		// Initialize simple dependencies
 		EcorePackage.eINSTANCE.eClass();
+		NxcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theGovernancePackage.createPackageContents();
@@ -242,76 +237,6 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(GovernancePackage.eNS_URI, theGovernancePackage);
 		return theGovernancePackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getModelElement() {
-		return modelElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getModelElement_Identifier() {
-		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getModelElement_Name() {
-		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getModelElement_Description() {
-		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getModelElement_Documentation() {
-		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getModelElement_Tags() {
-		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getModelElement_Properties() {
-		return (EReference)modelElementEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1073,14 +998,6 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 		isCreated = true;
 
 		// Create classes and their features
-		modelElementEClass = createEClass(MODEL_ELEMENT);
-		createEAttribute(modelElementEClass, MODEL_ELEMENT__IDENTIFIER);
-		createEAttribute(modelElementEClass, MODEL_ELEMENT__NAME);
-		createEAttribute(modelElementEClass, MODEL_ELEMENT__DESCRIPTION);
-		createEAttribute(modelElementEClass, MODEL_ELEMENT__DOCUMENTATION);
-		createEAttribute(modelElementEClass, MODEL_ELEMENT__TAGS);
-		createEReference(modelElementEClass, MODEL_ELEMENT__PROPERTIES);
-
 		propertyEClass = createEClass(PROPERTY);
 		createEAttribute(propertyEClass, PROPERTY__NAME);
 		createEAttribute(propertyEClass, PROPERTY__VALUE);
@@ -1195,34 +1112,27 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+		NxcorePackage theNxcorePackage = (NxcorePackage)EPackage.Registry.INSTANCE.getEPackage(NxcorePackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		governanceProgramEClass.getESuperTypes().add(this.getModelElement());
-		frameworkEClass.getESuperTypes().add(this.getModelElement());
-		requirementEClass.getESuperTypes().add(this.getModelElement());
-		policyEClass.getESuperTypes().add(this.getModelElement());
-		controlEClass.getESuperTypes().add(this.getModelElement());
-		riskEClass.getESuperTypes().add(this.getModelElement());
-		governedElementEClass.getESuperTypes().add(this.getModelElement());
-		controlApplicationEClass.getESuperTypes().add(this.getModelElement());
-		evidenceEClass.getESuperTypes().add(this.getModelElement());
-		assessmentEClass.getESuperTypes().add(this.getModelElement());
-		findingEClass.getESuperTypes().add(this.getModelElement());
-		waiverEClass.getESuperTypes().add(this.getModelElement());
+		governanceProgramEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		frameworkEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		requirementEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		policyEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		controlEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		riskEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		governedElementEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		controlApplicationEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		evidenceEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		assessmentEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		findingEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
+		waiverEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(modelElementEClass, ModelElement.class, "ModelElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getModelElement_Identifier(), theEcorePackage.getEString(), "identifier", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModelElement_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModelElement_Description(), theEcorePackage.getEString(), "description", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModelElement_Documentation(), theEcorePackage.getEString(), "documentation", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModelElement_Tags(), theEcorePackage.getEString(), "tags", null, 0, -1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModelElement_Properties(), this.getProperty(), null, "properties", null, 0, -1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProperty_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProperty_Value(), theEcorePackage.getEString(), "value", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1372,30 +1282,6 @@ public class GovernancePackageImpl extends EPackageImpl implements GovernancePac
 			   "operationReflection", "true",
 			   "importOrganizing", "true",
 			   "basePackage", "org.nasdanika.models"
-		   });
-		addAnnotation
-		  (modelElementEClass,
-		   source,
-		   new String[] {
-			   "documentation", " ---- Base ----"
-		   });
-		addAnnotation
-		  (getModelElement_Description(),
-		   source,
-		   new String[] {
-			   "documentation", " Short summary."
-		   });
-		addAnnotation
-		  (getModelElement_Documentation(),
-		   source,
-		   new String[] {
-			   "documentation", " Markdown documentation for humans, used by documentation generation."
-		   });
-		addAnnotation
-		  (getModelElement_Properties(),
-		   source,
-		   new String[] {
-			   "documentation", " Generic string properties: extension/annotation carrier, same technique as the Diagram and MCP models."
 		   });
 		addAnnotation
 		  (levelEEnum,

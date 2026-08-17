@@ -8,6 +8,8 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.nasdanika.models.nxcore.NxcorePackage;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Package</b> for the model.
@@ -60,88 +62,6 @@ public interface GovernancePackage extends EPackage {
 	GovernancePackage eINSTANCE = org.nasdanika.models.governance.impl.GovernancePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.ModelElementImpl <em>Model Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.governance.impl.ModelElementImpl
-	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getModelElement()
-	 * @generated
-	 */
-	int MODEL_ELEMENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT__IDENTIFIER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT__DESCRIPTION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT__DOCUMENTATION = 3;
-
-	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT__TAGS = 4;
-
-	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT__PROPERTIES = 5;
-
-	/**
-	 * The number of structural features of the '<em>Model Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_FEATURE_COUNT = 6;
-
-	/**
-	 * The number of operations of the '<em>Model Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.PropertyImpl <em>Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -149,7 +69,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getProperty()
 	 * @generated
 	 */
-	int PROPERTY = 1;
+	int PROPERTY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -195,34 +115,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getGovernanceProgram()
 	 * @generated
 	 */
-	int GOVERNANCE_PROGRAM = 2;
+	int GOVERNANCE_PROGRAM = 1;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOVERNANCE_PROGRAM__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOVERNANCE_PROGRAM__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int GOVERNANCE_PROGRAM__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -231,25 +133,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int GOVERNANCE_PROGRAM__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM__TAGS = MODEL_ELEMENT__TAGS;
+	int GOVERNANCE_PROGRAM__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int GOVERNANCE_PROGRAM__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNANCE_PROGRAM__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNANCE_PROGRAM__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNANCE_PROGRAM__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNANCE_PROGRAM__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNANCE_PROGRAM__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Frameworks</b></em>' containment reference list.
@@ -258,7 +205,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM__FRAMEWORKS = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int GOVERNANCE_PROGRAM__FRAMEWORKS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Policies</b></em>' containment reference list.
@@ -267,7 +214,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM__POLICIES = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int GOVERNANCE_PROGRAM__POLICIES = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Controls</b></em>' containment reference list.
@@ -276,7 +223,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM__CONTROLS = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int GOVERNANCE_PROGRAM__CONTROLS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Risks</b></em>' containment reference list.
@@ -285,7 +232,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM__RISKS = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int GOVERNANCE_PROGRAM__RISKS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Assessments</b></em>' containment reference list.
@@ -294,7 +241,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM__ASSESSMENTS = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int GOVERNANCE_PROGRAM__ASSESSMENTS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Waivers</b></em>' containment reference list.
@@ -303,7 +250,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM__WAIVERS = MODEL_ELEMENT_FEATURE_COUNT + 5;
+	int GOVERNANCE_PROGRAM__WAIVERS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Program</em>' class.
@@ -312,7 +259,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 6;
+	int GOVERNANCE_PROGRAM_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNANCE_PROGRAM___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNANCE_PROGRAM___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Program</em>' class.
@@ -321,7 +286,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNANCE_PROGRAM_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int GOVERNANCE_PROGRAM_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.FrameworkImpl <em>Framework</em>}' class.
@@ -331,34 +296,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getFramework()
 	 * @generated
 	 */
-	int FRAMEWORK = 3;
+	int FRAMEWORK = 2;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FRAMEWORK__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FRAMEWORK__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FRAMEWORK__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int FRAMEWORK__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -367,25 +314,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FRAMEWORK__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int FRAMEWORK__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FRAMEWORK__TAGS = MODEL_ELEMENT__TAGS;
+	int FRAMEWORK__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FRAMEWORK__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int FRAMEWORK__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWORK__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWORK__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWORK__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWORK__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWORK__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Authority</b></em>' attribute.
@@ -394,7 +386,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FRAMEWORK__AUTHORITY = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int FRAMEWORK__AUTHORITY = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -403,7 +395,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FRAMEWORK__VERSION = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int FRAMEWORK__VERSION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Website</b></em>' attribute.
@@ -412,7 +404,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FRAMEWORK__WEBSITE = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int FRAMEWORK__WEBSITE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Requirements</b></em>' containment reference list.
@@ -421,7 +413,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FRAMEWORK__REQUIREMENTS = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int FRAMEWORK__REQUIREMENTS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Framework</em>' class.
@@ -430,7 +422,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FRAMEWORK_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int FRAMEWORK_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWORK___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWORK___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Framework</em>' class.
@@ -439,7 +449,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FRAMEWORK_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int FRAMEWORK_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.RequirementImpl <em>Requirement</em>}' class.
@@ -449,34 +459,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getRequirement()
 	 * @generated
 	 */
-	int REQUIREMENT = 4;
+	int REQUIREMENT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int REQUIREMENT__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -485,25 +477,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int REQUIREMENT__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT__TAGS = MODEL_ELEMENT__TAGS;
+	int REQUIREMENT__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int REQUIREMENT__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Reference</b></em>' attribute.
@@ -512,7 +549,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT__REFERENCE = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int REQUIREMENT__REFERENCE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -521,7 +558,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT__CHILDREN = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int REQUIREMENT__CHILDREN = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Requirement</em>' class.
@@ -530,7 +567,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int REQUIREMENT_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Requirement</em>' class.
@@ -539,7 +594,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int REQUIREMENT_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.PolicyImpl <em>Policy</em>}' class.
@@ -549,34 +604,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getPolicy()
 	 * @generated
 	 */
-	int POLICY = 5;
+	int POLICY = 4;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POLICY__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POLICY__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int POLICY__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -585,25 +622,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int POLICY__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY__TAGS = MODEL_ELEMENT__TAGS;
+	int POLICY__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int POLICY__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLICY__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLICY__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLICY__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLICY__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLICY__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Satisfies</b></em>' reference list.
@@ -612,7 +694,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY__SATISFIES = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int POLICY__SATISFIES = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Enforced By</b></em>' reference list.
@@ -621,7 +703,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY__ENFORCED_BY = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int POLICY__ENFORCED_BY = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Policy</em>' class.
@@ -630,7 +712,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int POLICY_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLICY___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLICY___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Policy</em>' class.
@@ -639,7 +739,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POLICY_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int POLICY_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.ControlImpl <em>Control</em>}' class.
@@ -649,34 +749,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getControl()
 	 * @generated
 	 */
-	int CONTROL = 6;
+	int CONTROL = 5;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int CONTROL__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -685,25 +767,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int CONTROL__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__TAGS = MODEL_ELEMENT__TAGS;
+	int CONTROL__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int CONTROL__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Nature</b></em>' attribute.
@@ -712,7 +839,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__NATURE = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int CONTROL__NATURE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Automation</b></em>' attribute.
@@ -721,7 +848,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__AUTOMATION = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int CONTROL__AUTOMATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Satisfies</b></em>' reference list.
@@ -730,7 +857,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__SATISFIES = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int CONTROL__SATISFIES = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Mitigates</b></em>' reference list.
@@ -739,7 +866,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__MITIGATES = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int CONTROL__MITIGATES = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Control</em>' class.
@@ -748,7 +875,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int CONTROL_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Control</em>' class.
@@ -757,7 +902,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int CONTROL_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.RiskImpl <em>Risk</em>}' class.
@@ -767,34 +912,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getRisk()
 	 * @generated
 	 */
-	int RISK = 7;
+	int RISK = 6;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RISK__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RISK__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int RISK__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -803,25 +930,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int RISK__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__TAGS = MODEL_ELEMENT__TAGS;
+	int RISK__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int RISK__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' attribute.
@@ -830,7 +1002,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__CATEGORY = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int RISK__CATEGORY = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Inherent Likelihood</b></em>' attribute.
@@ -839,7 +1011,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__INHERENT_LIKELIHOOD = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int RISK__INHERENT_LIKELIHOOD = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Inherent Impact</b></em>' attribute.
@@ -848,7 +1020,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__INHERENT_IMPACT = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int RISK__INHERENT_IMPACT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Residual Likelihood</b></em>' attribute.
@@ -857,7 +1029,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__RESIDUAL_LIKELIHOOD = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int RISK__RESIDUAL_LIKELIHOOD = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Residual Impact</b></em>' attribute.
@@ -866,7 +1038,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__RESIDUAL_IMPACT = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int RISK__RESIDUAL_IMPACT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Treatment</b></em>' attribute.
@@ -875,7 +1047,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__TREATMENT = MODEL_ELEMENT_FEATURE_COUNT + 5;
+	int RISK__TREATMENT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Mitigations</b></em>' reference list.
@@ -884,7 +1056,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__MITIGATIONS = MODEL_ELEMENT_FEATURE_COUNT + 6;
+	int RISK__MITIGATIONS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -893,7 +1065,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK__SUBJECT = MODEL_ELEMENT_FEATURE_COUNT + 7;
+	int RISK__SUBJECT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Risk</em>' class.
@@ -902,7 +1074,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 8;
+	int RISK_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RISK___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Risk</em>' class.
@@ -911,7 +1101,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RISK_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int RISK_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.GovernedElementImpl <em>Governed Element</em>}' class.
@@ -921,34 +1111,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getGovernedElement()
 	 * @generated
 	 */
-	int GOVERNED_ELEMENT = 8;
+	int GOVERNED_ELEMENT = 7;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOVERNED_ELEMENT__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOVERNED_ELEMENT__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int GOVERNED_ELEMENT__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -957,25 +1129,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int GOVERNED_ELEMENT__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__TAGS = MODEL_ELEMENT__TAGS;
+	int GOVERNED_ELEMENT__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int GOVERNED_ELEMENT__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNED_ELEMENT__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNED_ELEMENT__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNED_ELEMENT__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNED_ELEMENT__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNED_ELEMENT__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Control Applications</b></em>' containment reference list.
@@ -984,7 +1201,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__CONTROL_APPLICATIONS = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int GOVERNED_ELEMENT__CONTROL_APPLICATIONS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Risks</b></em>' reference list.
@@ -993,7 +1210,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__RISKS = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int GOVERNED_ELEMENT__RISKS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Waivers</b></em>' reference list.
@@ -1002,7 +1219,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT__WAIVERS = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int GOVERNED_ELEMENT__WAIVERS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Governed Element</em>' class.
@@ -1011,7 +1228,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int GOVERNED_ELEMENT_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNED_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOVERNED_ELEMENT___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Governed Element</em>' class.
@@ -1020,7 +1255,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOVERNED_ELEMENT_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int GOVERNED_ELEMENT_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.ControlApplicationImpl <em>Control Application</em>}' class.
@@ -1030,34 +1265,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getControlApplication()
 	 * @generated
 	 */
-	int CONTROL_APPLICATION = 9;
+	int CONTROL_APPLICATION = 8;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_APPLICATION__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_APPLICATION__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int CONTROL_APPLICATION__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1066,25 +1283,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int CONTROL_APPLICATION__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION__TAGS = MODEL_ELEMENT__TAGS;
+	int CONTROL_APPLICATION__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int CONTROL_APPLICATION__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_APPLICATION__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_APPLICATION__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_APPLICATION__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_APPLICATION__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_APPLICATION__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Subject</b></em>' container reference.
@@ -1093,7 +1355,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION__SUBJECT = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int CONTROL_APPLICATION__SUBJECT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' reference.
@@ -1102,7 +1364,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION__CONTROL = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int CONTROL_APPLICATION__CONTROL = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1111,7 +1373,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION__STATUS = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int CONTROL_APPLICATION__STATUS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Last Verified</b></em>' attribute.
@@ -1120,7 +1382,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION__LAST_VERIFIED = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int CONTROL_APPLICATION__LAST_VERIFIED = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' containment reference list.
@@ -1129,7 +1391,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION__EVIDENCE = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int CONTROL_APPLICATION__EVIDENCE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Control Application</em>' class.
@@ -1138,7 +1400,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 5;
+	int CONTROL_APPLICATION_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_APPLICATION___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_APPLICATION___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Control Application</em>' class.
@@ -1147,7 +1427,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_APPLICATION_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int CONTROL_APPLICATION_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.EvidenceImpl <em>Evidence</em>}' class.
@@ -1157,34 +1437,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getEvidence()
 	 * @generated
 	 */
-	int EVIDENCE = 10;
+	int EVIDENCE = 9;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int EVIDENCE__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1193,25 +1455,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int EVIDENCE__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__TAGS = MODEL_ELEMENT__TAGS;
+	int EVIDENCE__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int EVIDENCE__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Location</b></em>' attribute.
@@ -1220,7 +1527,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__LOCATION = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int EVIDENCE__LOCATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Collected</b></em>' attribute.
@@ -1229,7 +1536,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__COLLECTED = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int EVIDENCE__COLLECTED = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' attribute.
@@ -1238,7 +1545,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__SOURCE = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int EVIDENCE__SOURCE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Automated</b></em>' attribute.
@@ -1247,7 +1554,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE__AUTOMATED = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int EVIDENCE__AUTOMATED = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Evidence</em>' class.
@@ -1256,7 +1563,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int EVIDENCE_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Evidence</em>' class.
@@ -1265,7 +1590,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int EVIDENCE_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.AssessmentImpl <em>Assessment</em>}' class.
@@ -1275,34 +1600,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getAssessment()
 	 * @generated
 	 */
-	int ASSESSMENT = 11;
+	int ASSESSMENT = 10;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int ASSESSMENT__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1311,25 +1618,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int ASSESSMENT__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__TAGS = MODEL_ELEMENT__TAGS;
+	int ASSESSMENT__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int ASSESSMENT__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -1338,7 +1690,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__DATE = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int ASSESSMENT__DATE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Assessor</b></em>' attribute.
@@ -1347,7 +1699,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__ASSESSOR = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int ASSESSMENT__ASSESSOR = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Scope</b></em>' reference list.
@@ -1356,7 +1708,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__SCOPE = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int ASSESSMENT__SCOPE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Findings</b></em>' containment reference list.
@@ -1365,7 +1717,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__FINDINGS = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int ASSESSMENT__FINDINGS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' containment reference list.
@@ -1374,7 +1726,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__EVIDENCE = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int ASSESSMENT__EVIDENCE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Assessment</em>' class.
@@ -1383,7 +1735,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 5;
+	int ASSESSMENT_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Assessment</em>' class.
@@ -1392,7 +1762,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int ASSESSMENT_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.FindingImpl <em>Finding</em>}' class.
@@ -1402,34 +1772,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getFinding()
 	 * @generated
 	 */
-	int FINDING = 12;
+	int FINDING = 11;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINDING__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINDING__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int FINDING__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1438,25 +1790,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int FINDING__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__TAGS = MODEL_ELEMENT__TAGS;
+	int FINDING__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int FINDING__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Severity</b></em>' attribute.
@@ -1465,7 +1862,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__SEVERITY = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int FINDING__SEVERITY = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1474,7 +1871,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__STATUS = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int FINDING__STATUS = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -1483,7 +1880,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__SUBJECT = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int FINDING__SUBJECT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Remediation</b></em>' attribute.
@@ -1492,7 +1889,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__REMEDIATION = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int FINDING__REMEDIATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Due</b></em>' attribute.
@@ -1501,7 +1898,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__DUE = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int FINDING__DUE = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Finding</em>' class.
@@ -1510,7 +1907,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 5;
+	int FINDING_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Finding</em>' class.
@@ -1519,7 +1934,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int FINDING_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.impl.WaiverImpl <em>Waiver</em>}' class.
@@ -1529,34 +1944,16 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getWaiver()
 	 * @generated
 	 */
-	int WAIVER = 13;
+	int WAIVER = 12;
 
 	/**
-	 * The feature id for the '<em><b>Identifier</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__IDENTIFIER = MODEL_ELEMENT__IDENTIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WAIVER__NAME = MODEL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WAIVER__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+	int WAIVER__ID = NxcorePackage.MODEL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1565,25 +1962,70 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+	int WAIVER__DOCUMENTATION = NxcorePackage.MODEL_ELEMENT__DOCUMENTATION;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' attribute list.
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__TAGS = MODEL_ELEMENT__TAGS;
+	int WAIVER__DOC_REF = NxcorePackage.MODEL_ELEMENT__DOC_REF;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__PROPERTIES = MODEL_ELEMENT__PROPERTIES;
+	int WAIVER__DOC_FORMAT = NxcorePackage.MODEL_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIVER__DOC_CONTENTS = NxcorePackage.MODEL_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIVER__DOC_SECTIONS = NxcorePackage.MODEL_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIVER__MARKERS = NxcorePackage.MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIVER__ICON = NxcorePackage.MODEL_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIVER__URIS = NxcorePackage.MODEL_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' reference.
@@ -1592,7 +2034,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__CONTROL = MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int WAIVER__CONTROL = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Subject</b></em>' reference.
@@ -1601,7 +2043,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__SUBJECT = MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int WAIVER__SUBJECT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Justification</b></em>' attribute.
@@ -1610,7 +2052,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__JUSTIFICATION = MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int WAIVER__JUSTIFICATION = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Expires</b></em>' attribute.
@@ -1619,7 +2061,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER__EXPIRES = MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int WAIVER__EXPIRES = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Waiver</em>' class.
@@ -1628,7 +2070,25 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int WAIVER_FEATURE_COUNT = NxcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Collect</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIVER___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.MODEL_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Referrers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAIVER___GET_REFERRERS__EREFERENCE = NxcorePackage.MODEL_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Waiver</em>' class.
@@ -1637,7 +2097,7 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAIVER_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int WAIVER_OPERATION_COUNT = NxcorePackage.MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.Level <em>Level</em>}' enum.
@@ -1647,7 +2107,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getLevel()
 	 * @generated
 	 */
-	int LEVEL = 14;
+	int LEVEL = 13;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.ControlNature <em>Control Nature</em>}' enum.
@@ -1657,7 +2117,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getControlNature()
 	 * @generated
 	 */
-	int CONTROL_NATURE = 15;
+	int CONTROL_NATURE = 14;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.ControlAutomation <em>Control Automation</em>}' enum.
@@ -1667,7 +2127,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getControlAutomation()
 	 * @generated
 	 */
-	int CONTROL_AUTOMATION = 16;
+	int CONTROL_AUTOMATION = 15;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.RiskTreatment <em>Risk Treatment</em>}' enum.
@@ -1677,7 +2137,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getRiskTreatment()
 	 * @generated
 	 */
-	int RISK_TREATMENT = 17;
+	int RISK_TREATMENT = 16;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.ImplementationStatus <em>Implementation Status</em>}' enum.
@@ -1687,7 +2147,7 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getImplementationStatus()
 	 * @generated
 	 */
-	int IMPLEMENTATION_STATUS = 18;
+	int IMPLEMENTATION_STATUS = 17;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.governance.FindingStatus <em>Finding Status</em>}' enum.
@@ -1697,84 +2157,8 @@ public interface GovernancePackage extends EPackage {
 	 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getFindingStatus()
 	 * @generated
 	 */
-	int FINDING_STATUS = 19;
+	int FINDING_STATUS = 18;
 
-
-	/**
-	 * Returns the meta object for class '{@link org.nasdanika.models.governance.ModelElement <em>Model Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Model Element</em>'.
-	 * @see org.nasdanika.models.governance.ModelElement
-	 * @generated
-	 */
-	EClass getModelElement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.ModelElement#getIdentifier <em>Identifier</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Identifier</em>'.
-	 * @see org.nasdanika.models.governance.ModelElement#getIdentifier()
-	 * @see #getModelElement()
-	 * @generated
-	 */
-	EAttribute getModelElement_Identifier();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.ModelElement#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.nasdanika.models.governance.ModelElement#getName()
-	 * @see #getModelElement()
-	 * @generated
-	 */
-	EAttribute getModelElement_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.ModelElement#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.nasdanika.models.governance.ModelElement#getDescription()
-	 * @see #getModelElement()
-	 * @generated
-	 */
-	EAttribute getModelElement_Description();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.governance.ModelElement#getDocumentation <em>Documentation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Documentation</em>'.
-	 * @see org.nasdanika.models.governance.ModelElement#getDocumentation()
-	 * @see #getModelElement()
-	 * @generated
-	 */
-	EAttribute getModelElement_Documentation();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.governance.ModelElement#getTags <em>Tags</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Tags</em>'.
-	 * @see org.nasdanika.models.governance.ModelElement#getTags()
-	 * @see #getModelElement()
-	 * @generated
-	 */
-	EAttribute getModelElement_Tags();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.governance.ModelElement#getProperties <em>Properties</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Properties</em>'.
-	 * @see org.nasdanika.models.governance.ModelElement#getProperties()
-	 * @see #getModelElement()
-	 * @generated
-	 */
-	EReference getModelElement_Properties();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.governance.Property <em>Property</em>}'.
@@ -2583,64 +2967,6 @@ public interface GovernancePackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
-		/**
-		 * The meta object literal for the '{@link org.nasdanika.models.governance.impl.ModelElementImpl <em>Model Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.models.governance.impl.ModelElementImpl
-		 * @see org.nasdanika.models.governance.impl.GovernancePackageImpl#getModelElement()
-		 * @generated
-		 */
-		EClass MODEL_ELEMENT = eINSTANCE.getModelElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODEL_ELEMENT__IDENTIFIER = eINSTANCE.getModelElement_Identifier();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODEL_ELEMENT__NAME = eINSTANCE.getModelElement_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODEL_ELEMENT__DESCRIPTION = eINSTANCE.getModelElement_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>Documentation</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODEL_ELEMENT__DOCUMENTATION = eINSTANCE.getModelElement_Documentation();
-
-		/**
-		 * The meta object literal for the '<em><b>Tags</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODEL_ELEMENT__TAGS = eINSTANCE.getModelElement_Tags();
-
-		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODEL_ELEMENT__PROPERTIES = eINSTANCE.getModelElement_Properties();
-
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.governance.impl.PropertyImpl <em>Property</em>}' class.
 		 * <!-- begin-user-doc -->

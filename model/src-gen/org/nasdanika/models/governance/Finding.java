@@ -4,6 +4,8 @@ package org.nasdanika.models.governance;
 
 import java.util.Date;
 
+import org.nasdanika.models.nxcore.ModelElement;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Finding</b></em>'.

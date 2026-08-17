@@ -21,6 +21,8 @@ import org.nasdanika.models.governance.GovernancePackage;
 import org.nasdanika.models.governance.GovernedElement;
 import org.nasdanika.models.governance.ImplementationStatus;
 
+import org.nasdanika.models.nxcore.impl.ModelElementImpl;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Control Application</b></em>'.

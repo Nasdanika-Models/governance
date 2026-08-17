@@ -22,6 +22,8 @@ import org.nasdanika.models.governance.Policy;
 import org.nasdanika.models.governance.Risk;
 import org.nasdanika.models.governance.Waiver;
 
+import org.nasdanika.models.nxcore.impl.ModelElementImpl;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Program</b></em>'.

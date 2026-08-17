@@ -13,6 +13,8 @@ import org.nasdanika.models.governance.GovernancePackage;
 import org.nasdanika.models.governance.Policy;
 import org.nasdanika.models.governance.Requirement;
 
+import org.nasdanika.models.nxcore.impl.ModelElementImpl;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Policy</b></em>'.

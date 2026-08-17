@@ -1,8 +1,5 @@
 import org.nasdanika.capability.CapabilityFactory;
-import org.nasdanika.models.governance.capability.GovernanceArrayResourceContentsHandlerCapabilityFactory;
 import org.nasdanika.models.governance.capability.GovernanceEPackageResourceSetCapabilityFactory;
-import org.nasdanika.models.governance.capability.GovernanceResourceContentsHandlerCapabilityFactory;
-import org.nasdanika.models.governance.capability.GovernanceResourceFactoryCapabilityFactory;
 
 module org.nasdanika.models.governance.Governance {
 	
@@ -12,12 +9,9 @@ module org.nasdanika.models.governance.Governance {
 	
 	requires transitive org.eclipse.emf.ecore;
 	requires transitive org.eclipse.emf.common;
-	requires transitive org.nasdanika.capability;
+	requires transitive org.nasdanika.models.decision.binding;
 		
 	provides CapabilityFactory with 
-		GovernanceEPackageResourceSetCapabilityFactory,
-		GovernanceResourceFactoryCapabilityFactory,
-		GovernanceResourceContentsHandlerCapabilityFactory,
-		GovernanceArrayResourceContentsHandlerCapabilityFactory;
+		GovernanceEPackageResourceSetCapabilityFactory;
 	
 }

@@ -11,6 +11,12 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.nasdanika.models.governance.*;
 
+import org.nasdanika.models.nxcore.Documented;
+import org.nasdanika.models.nxcore.Marked;
+import org.nasdanika.models.nxcore.ModelElement;
+import org.nasdanika.models.nxcore.Referrable;
+import org.nasdanika.models.nxcore.StringIdentity;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
@@ -68,10 +74,6 @@ public class GovernanceAdapterFactory extends AdapterFactoryImpl {
 	protected GovernanceSwitch<Adapter> modelSwitch =
 		new GovernanceSwitch<Adapter>() {
 			@Override
-			public Adapter caseModelElement(ModelElement object) {
-				return createModelElementAdapter();
-			}
-			@Override
 			public Adapter caseProperty(Property object) {
 				return createPropertyAdapter();
 			}
@@ -124,6 +126,26 @@ public class GovernanceAdapterFactory extends AdapterFactoryImpl {
 				return createWaiverAdapter();
 			}
 			@Override
+			public Adapter caseReferrable(Referrable object) {
+				return createReferrableAdapter();
+			}
+			@Override
+			public Adapter caseStringIdentity(StringIdentity object) {
+				return createStringIdentityAdapter();
+			}
+			@Override
+			public Adapter caseDocumented(Documented object) {
+				return createDocumentedAdapter();
+			}
+			@Override
+			public Adapter caseMarked(Marked object) {
+				return createMarkedAdapter();
+			}
+			@Override
+			public Adapter caseModelElement(ModelElement object) {
+				return createModelElementAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -142,20 +164,6 @@ public class GovernanceAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.governance.ModelElement <em>Model Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.models.governance.ModelElement
-	 * @generated
-	 */
-	public Adapter createModelElementAdapter() {
-		return null;
-	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.governance.Property <em>Property</em>}'.
@@ -336,6 +344,76 @@ public class GovernanceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createWaiverAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.nxcore.Referrable <em>Referrable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.nxcore.Referrable
+	 * @generated
+	 */
+	public Adapter createReferrableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.nxcore.StringIdentity <em>String Identity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.nxcore.StringIdentity
+	 * @generated
+	 */
+	public Adapter createStringIdentityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.nxcore.Documented <em>Documented</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.nxcore.Documented
+	 * @generated
+	 */
+	public Adapter createDocumentedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.nxcore.Marked <em>Marked</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.nxcore.Marked
+	 * @generated
+	 */
+	public Adapter createMarkedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.nxcore.ModelElement <em>Model Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.nxcore.ModelElement
+	 * @generated
+	 */
+	public Adapter createModelElementAdapter() {
 		return null;
 	}
 

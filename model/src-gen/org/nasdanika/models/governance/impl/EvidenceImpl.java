@@ -9,6 +9,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.nasdanika.models.governance.Evidence;
 import org.nasdanika.models.governance.GovernancePackage;
 
+import org.nasdanika.models.nxcore.impl.ModelElementImpl;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Evidence</b></em>'.
